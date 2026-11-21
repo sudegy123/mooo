@@ -1,0 +1,83 @@
+{
+  "id": "sudegy-biz-01",
+  "client": "sudegy",
+  "format": "pov-skit",
+  "lang": "ar",
+  "topic": "POV for business owners and clinic directors: you hire an agency to build a website, but it ends up as static pages that do not change your sales because developers jump straight to code without understanding how your business actually works. In Sudegy, we are business-first: we study your workflow, where customers hesitate, and where time is wasted, then build custom interactive engines like Dr. Mazin AI skin analysis, 3D dental triage, and solar load calculators. The CTA asks owners to comment their industry to diagnose their custom system.",
+  "notes": "Tone is confident, founder-to-founder, respectful. The hook calls out the frustration of buying a website that does not bring sales. The escalate sentence explains that coders build static templates without studying your workflow. The twist states that Sudegy diagnoses your operations and business leaks first. The fix highlights our custom systems like Dr. Mazin and solar calculators. The CTA asks owners to comment their business type.",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/tech_drive.wav",
+  "musicVolume": 0.22,
+  "scenes": [
+    {
+      "type": "title",
+      "say": ["hook"],
+      "bg": "dark",
+      "size": 94
+    },
+    {
+      "type": "stage",
+      "say": ["escalate"],
+      "bg": "room",
+      "props": [
+        { "id": "d", "type": "desk", "x": 280, "y": 1460 }
+      ],
+      "chars": [
+        { "id": "m", "type": "man_gulf", "x": 540, "opts": { "dress": "#ffffff" } }
+      ],
+      "els": [
+        { "id": "tag", "kind": "tag", "text": "قالب ميت", "x": 620, "y": 1100, "color": "danger" },
+        { "id": "bub", "kind": "bubble", "text": "وين المبيعات؟", "x": 280, "y": 780 }
+      ],
+      "beats": [
+        { "at": 0.3, "do": "tilt", "who": "m", "deg": 8 },
+        { "at": 0.8, "do": "pop", "el": "tag" },
+        { "at": 1.3, "do": "sad", "who": "m" },
+        { "at": 1.7, "do": "pop", "el": "bub" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["twist"],
+      "bg": "light",
+      "props": [
+        { "id": "clk", "type": "clock", "x": 540, "y": 700 }
+      ],
+      "chars": [
+        { "id": "lead", "type": "doctor_m", "x": 540, "opts": { "scrub": "#0f6b57" } }
+      ],
+      "els": [
+        { "id": "tag1", "kind": "tag", "text": "دراسة البزنس أولاً", "x": 360, "y": 1100, "color": "good" },
+        { "id": "tag2", "kind": "tag", "text": "معالجة أسباب النزيف", "x": 340, "y": 1220, "color": "gold" }
+      ],
+      "beats": [
+        { "at": 0.4, "do": "spin", "prop": "clk", "dur": 2.5, "turns": 2 },
+        { "at": 0.8, "do": "point", "who": "lead", "side": "r", "hold": 1.5 },
+        { "at": 1.2, "do": "pop", "el": "tag1" },
+        { "at": 1.9, "do": "pop", "el": "tag2" }
+      ]
+    },
+    {
+      "type": "phone",
+      "group": "app",
+      "say": ["fix"],
+      "side": { "type": "doctor_m", "opts": { "scrub": "#0f6b57" } },
+      "pill": "أنظمة تفاعلية ذكية تعالج مشاكلك",
+      "scan": true,
+      "scanAt": 0.35,
+      "phases": [
+        { "clip": "face_scan", "weight": 1.2 },
+        { "clip": "microscope", "weight": 1.0 }
+      ]
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "char": { "type": "doctor_m", "x": 300, "opts": { "scrub": "#0f6b57" } },
+      "comment": "اكتب نشاطك في التعليقات لنحدد نظامك"
+    }
+  ]
+}
+

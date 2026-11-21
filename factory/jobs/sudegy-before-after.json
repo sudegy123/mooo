@@ -1,0 +1,90 @@
+{
+  "id": "sudegy-before-after",
+  "client": "sudegy",
+  "format": "before-after-review",
+  "lang": "ar",
+  "voiceStyle": "clear, energetic, confident and inspiring Arabic with natural nuance for TikTok e-commerce business owners",
+  "voice": "Fenrir",
+  "maxTempo": 1.02,
+  "minTempo": 0.88,
+  "topic": "Before & After transformation of an e-commerce perfume & beauty store for Khulud Farouq in Dubai. Before: clumsy Wix Studio template website with clunky menu and slow loading. After: bespoke high-ticket luxury e-commerce store built by Sudegy at kfbeuty.com with gold branding, instant WhatsApp integration, and seamless cart. Features real client WhatsApp testimonial: 'ده انجاز عالمي'.",
+  "notes": "TikTok before & after showcase. Scene 0 kinetic hook. Scene 1 phone showing old Wix site. Scene 2 phone showing new luxury bespoke store. Scene 3 media card showing genuine client review screenshot. Scene 4 brand CTA.",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.18,
+  "script": [
+    {
+      "role": "hook",
+      "text": "شوف الفرق لما متجرك يتحول من قالب عادي لبراند فخم على أصوله.",
+      "keyword": "الفرق"
+    },
+    {
+      "role": "before",
+      "text": "الموقع قبل كان معمول بقالب ويكس عادي وبطيء وفيهو لخبطة في القوائم.",
+      "keyword": "ويكس"
+    },
+    {
+      "role": "after",
+      "text": "سوديجي بنت متجر مخصص كامل بتصميم فاخر وسرعة خيالية مربوط بالواتساب.",
+      "keyword": "فاخر"
+    },
+    {
+      "role": "review",
+      "text": "ورأي صاحبة المتجر كان: يا سلام ده إنجاز عالمي شكرا بجد.",
+      "keyword": "عالمي"
+    },
+    {
+      "role": "cta",
+      "text": "عايز تحول متجرك لبراند عالمي؟ تواصل معنا عبر موقعنا Sudegy.com.",
+      "keyword": "Sudegy.com"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "title",
+      "say": ["hook"],
+      "bg": "dark",
+      "size": 80,
+      "sub": "قبل وبعد: نقلة نوعية في تصميم المتاجر"
+    },
+    {
+      "type": "phone",
+      "group": "before",
+      "say": ["before"],
+      "side": {
+        "type": "woman"
+      },
+      "pill": "قبل: قالب ويكس تقليدي ولخبطة في التصفح",
+      "clip": "kf_before_reel"
+    },
+    {
+      "type": "phone",
+      "group": "after",
+      "say": ["after"],
+      "side": {
+        "type": "woman"
+      },
+      "pill": "بعد: متجر سحابي مخصص بتصميم فاخر",
+      "clip": "kf_after_reel"
+    },
+    {
+      "type": "media",
+      "say": ["review"],
+      "src": "kf_client_review",
+      "frame": "card",
+      "zoom": 1.04
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "char": {
+        "type": "woman",
+        "x": 300
+      },
+      "comment": "اطلب متجرك المخصص عبر Sudegy.com"
+    }
+  ]
+}
+

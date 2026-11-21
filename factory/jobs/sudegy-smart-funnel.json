@@ -1,0 +1,175 @@
+{
+  "id": "sudegy-smart-funnel",
+  "client": "sudegy",
+  "format": "smart-funnel-sales",
+  "lang": "ar",
+  "voiceStyle": "rate=+12% natural warm energetic conversational Arabic business creator tone, confident and engaging with natural human pauses",
+  "voice": "Fenrir",
+  "maxTempo": 1.15,
+  "minTempo": 1.0,
+  "topic": "High-converting direct-response sales video for Gulf businesses. Addressing the massive waste in ad spend caused by repetitive 'how much?' queries where customers disappear on WhatsApp. Introducing Sudegy's November Special Package: 1) Interactive Smart Qualification Funnel (qualifies problem, service, and budget in 45s), 2) Direct WhatsApp handoff with complete customer dossier ready to buy, 3) Internal CRM to manage deals and track sales team to close. Complete investment: 1,990 SAR setup & live in 3 days. CTA: Comment 'interested' for a 30-second live demo link.",
+  "notes": "Rich 2D vector animation with expressive Gulf business characters, WhatsApp chaos vs qualification cards, deal pipelines, and November offer badges.",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/tech_drive.wav",
+  "musicVolume": 0.16,
+  "script": [
+    {
+      "role": "hook",
+      "text": "كم ميزانية إعلانات ضاعت في سؤال بكم ثم يختفي العميل وسط زحمة الواتساب؟",
+      "keyword": "الواتساب"
+    },
+    {
+      "role": "funnel",
+      "text": "الحل يبدأ بمسار فرز ذكي يحدد مشكلة العميل والخدمة والميزانية في ثوان معدودة.",
+      "keyword": "الميزانية"
+    },
+    {
+      "role": "dossier",
+      "text": "يتحول العميل للواتساب بملف كامل ومقتنع بكل التفاصيل ليدخل جاهزا للشراء.",
+      "keyword": "للشراء"
+    },
+    {
+      "role": "crm",
+      "text": "مع نظام داخلي لإدارة الصفقات ومتابعة فريقك حتى إتمام البيع دون نسيان.",
+      "keyword": "الصفقات"
+    },
+    {
+      "role": "offer",
+      "text": "ضمن عروض نوفمبر باقة متكاملة باستثمار استثنائي وجاهزة للعمل خلال ثلاثة أيام.",
+      "keyword": "نوفمبر"
+    },
+    {
+      "role": "cta",
+      "text": "اكتب مهتم في التعليقات ونرسل لك رابط تجربة حية تشاهد النظام بنفسك.",
+      "keyword": "التعليقات"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "stage",
+      "say": ["hook"],
+      "bg": "room",
+      "props": [
+        { "id": "chaos", "type": "bikamChaos", "x": 250, "y": 760 },
+        { "id": "alarm", "type": "siren", "x": 540, "y": 520 }
+      ],
+      "chars": [
+        { "id": "boss", "type": "man_gulf", "x": 340, "y": 1500, "opts": { "dress": "#ffffff" } }
+      ],
+      "els": [
+        { "id": "b_hook", "kind": "badge", "color": "danger", "text": "🚨 سؤال واحد يهدر ميزانيتك: بكم؟", "x": 260, "y": 640 },
+        { "id": "mark_cross", "kind": "mark", "ok": false, "x": 490, "y": 610 },
+        { "id": "tag_burn", "kind": "badge", "color": "danger", "text": "💸 العميل يسأل ويختفي وسط الزحمة", "x": 230, "y": 1140 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_hook" },
+        { "at": 0.5, "do": "surprise", "who": "boss" },
+        { "at": 0.9, "do": "angry", "who": "boss" },
+        { "at": 1.3, "do": "show", "el": "tag_burn" },
+        { "at": 1.8, "do": "show", "el": "mark_cross" },
+        { "at": 2.3, "do": "shake", "who": "boss" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["funnel"],
+      "bg": "light",
+      "props": [
+        { "id": "funnelCard", "type": "smartFunnelCard", "x": 240, "y": 750 }
+      ],
+      "chars": [
+        { "id": "mgr", "type": "man_gulf", "x": 820, "y": 1500, "opts": { "dress": "#ffffff" } }
+      ],
+      "els": [
+        { "id": "b_fn", "kind": "badge", "color": "good", "text": "⚡ 1. نظام الفرز الذكي (Smart Funnel)", "x": 220, "y": 630 },
+        { "id": "tag_qual", "kind": "badge", "color": "gold", "text": "🎯 تصفية المشكلة والخدمة والميزانية في 45 ثانية", "x": 170, "y": 1140 },
+        { "id": "mark_ok", "kind": "mark", "ok": true, "x": 180, "y": 780 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_fn" },
+        { "at": 0.6, "do": "point", "who": "mgr", "side": "r", "hold": 1.5 },
+        { "at": 1.1, "do": "show", "el": "tag_qual" },
+        { "at": 1.5, "do": "show", "el": "mark_ok" },
+        { "at": 2.2, "do": "smile", "who": "mgr" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["dossier"],
+      "bg": "room",
+      "props": [
+        { "id": "dosCard", "type": "whatsappDossier", "x": 240, "y": 750 }
+      ],
+      "chars": [
+        { "id": "clerk", "type": "seller", "x": 780, "y": 1500, "opts": { "shirt": "#0f6b57" } }
+      ],
+      "els": [
+        { "id": "b_dos", "kind": "badge", "color": "good", "text": "📲 2. تحويل مباشر بملف العميل المكتمل", "x": 210, "y": 630 },
+        { "id": "tag_ready", "kind": "badge", "color": "gold", "text": "⭐ عميل جاهز ومقتنع بالباقة قبل التواصل", "x": 190, "y": 1140 },
+        { "id": "stamp_ready", "kind": "stamp", "text": "جاهز للشراء", "x": 440, "y": 1260 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_dos" },
+        { "at": 0.6, "do": "point", "who": "clerk", "side": "r", "hold": 1.5 },
+        { "at": 1.1, "do": "show", "el": "tag_ready" },
+        { "at": 1.6, "do": "stamp", "el": "stamp_ready" },
+        { "at": 2.2, "do": "smile", "who": "clerk" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["crm"],
+      "bg": "light",
+      "props": [
+        { "id": "board", "type": "crmBoard", "x": 340, "y": 780 }
+      ],
+      "chars": [
+        { "id": "lead", "type": "doctor_m", "x": 840, "y": 1500, "opts": { "scrub": "#0f6b57" } }
+      ],
+      "els": [
+        { "id": "b_crm", "kind": "badge", "color": "good", "text": "📊 3. نظام CRM داخلي مدمج لإدارة المبيعات", "x": 180, "y": 640 },
+        { "id": "tag_track", "kind": "badge", "color": "gold", "text": "🛡️ متابعة الصفقات وفريق البيع حتى الإغلاق", "x": 190, "y": 1140 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_crm" },
+        { "at": 0.6, "do": "point", "who": "lead", "side": "r", "hold": 1.4 },
+        { "at": 1.1, "do": "show", "el": "tag_track" },
+        { "at": 2.0, "do": "cheer", "who": "lead" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["offer"],
+      "bg": "room",
+      "props": [
+        { "id": "offerCard", "type": "novemberOfferCard", "x": 230, "y": 740 }
+      ],
+      "chars": [
+        { "id": "founder", "type": "man_gulf", "x": 360, "y": 1500, "opts": { "dress": "#ffffff" } },
+        { "id": "partner", "type": "factory_boss", "x": 740, "y": 1500 }
+      ],
+      "els": [
+        { "id": "b_off", "kind": "badge", "color": "gold", "text": "🌟 باقة التحويل الذكي المتكاملة", "x": 270, "y": 640 },
+        { "id": "tag_deal", "kind": "badge", "color": "good", "text": "💰 1,990 ريال فقط شامل التأسيس والتشغيل", "x": 170, "y": 1140 },
+        { "id": "tag_time", "kind": "badge", "color": "gold", "text": "⏱️ جاهز للعمل خلال 3 أيام فقط", "x": 260, "y": 1250 },
+        { "id": "stamp_nov", "kind": "stamp", "text": "عرض نوفمبر", "x": 440, "y": 1330 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_off" },
+        { "at": 0.6, "do": "nod", "who": "founder" },
+        { "at": 1.1, "do": "show", "el": "tag_deal" },
+        { "at": 1.5, "do": "show", "el": "tag_time" },
+        { "at": 1.9, "do": "stamp", "el": "stamp_nov" },
+        { "at": 2.4, "do": "cheer", "who": "partner" }
+      ]
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "char": { "type": "man_gulf", "x": 300, "opts": { "dress": "#ffffff" } },
+      "comment": "اكتب (مهتم) في التعليقات لتجربة الديمو 💬👇"
+    }
+  ]
+}

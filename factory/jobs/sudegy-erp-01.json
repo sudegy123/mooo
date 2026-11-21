@@ -1,0 +1,89 @@
+{
+  "id": "sudegy-erp-01",
+  "client": "sudegy",
+  "format": "explainer-2d",
+  "lang": "ar",
+  "voiceStyle": "calm, clear, executive and confident Standard Arabic, medium pace, authoritative tone",
+  "topic": "Before and After ERP system for business owners and executives. Before: isolated data silos, scattered Excel sheets, inventory waste and cash leaks. After: a unified central screen connecting sales, inventory, and costs in real time. Sudegy difference: operational consulting first with senior business specialists, bespoke system tailored to your exact workflow, full ownership, and zero monthly subscriptions.",
+  "notes": "Executive enterprise visuals contrasting operational chaos before ERP with centralized real-time control after ERP. Scenes feature title opening, photorealistic chaos office clip, executive digital control dashboard clip, boardroom consulting session clip, and premium Sudegy CTA.",
+  "variants": {
+    "hooks": 3
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.20,
+  "script": [
+    {
+      "role": "hook",
+      "text": "كيف تبدو شركتك قبل وبعد نظام إدارة موارد المؤسسات؟",
+      "keyword": "المؤسسات"
+    },
+    {
+      "role": "define",
+      "text": "قبل النظام جزر منعزلة وإكسل مشتت وهدر في المخزون والأرباح.",
+      "keyword": "منعزلة"
+    },
+    {
+      "role": "benefits",
+      "text": "بعد النظام شاشة واحدة تربط مبيعاتك ومخزونك وتكاليفك لحظة بلحظة.",
+      "keyword": "مبيعاتك"
+    },
+    {
+      "role": "differ",
+      "text": "ونختلف بدراسة دورتك أولا وبناء نظام مخصص ملكك دون اشتراكات.",
+      "keyword": "مخصص"
+    },
+    {
+      "role": "cta",
+      "text": "اكتب نشاط شركتك في التعليقات لنصمم لك نظام إدارة الموارد المناسب.",
+      "keyword": "التعليقات"
+    }
+  ],
+  "hooks": [
+    {
+      "text": "هل تدير شركتك عبر ملفات إكسل مبعثرة وتتساءل أين تضيع أرباحك؟",
+      "keyword": "إكسل",
+      "technique": "relatable moment"
+    },
+    {
+      "text": "لماذا تفشل الشركات في التوسع دون نظام يربط كافة أقسامها؟",
+      "keyword": "التوسع",
+      "technique": "direct question"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "title",
+      "say": ["hook"],
+      "bg": "dark",
+      "size": 88
+    },
+    {
+      "type": "media",
+      "say": ["define"],
+      "src": "clip_ops_chaos",
+      "frame": "full",
+      "zoom": 1.06
+    },
+    {
+      "type": "media",
+      "say": ["benefits"],
+      "src": "clip_control",
+      "frame": "full",
+      "zoom": 1.07
+    },
+    {
+      "type": "media",
+      "say": ["differ"],
+      "src": "clip_consulting",
+      "frame": "full",
+      "zoom": 1.08
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "bg": "dark",
+      "comment": "اكتب نشاط شركتك في التعليقات لنصمم لك نظامك"
+    }
+  ]
+}
+

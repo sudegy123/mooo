@@ -1,0 +1,190 @@
+{
+  "id": "sudegy-dental-midnight-2d",
+  "client": "sudegy",
+  "format": "dental-smart-clinic",
+  "lang": "ar",
+  "voiceStyle": "rate=+10% natural warm empathetic engaging Arabic creator tone, highly expressive medical storytelling with natural human pacing",
+  "voice": "Fenrir",
+  "maxTempo": 1.12,
+  "minTempo": 1.0,
+  "topic": "Relatable 2D animated TikTok story about a wife waking up with excruciating toothache at 2:00 AM unable to speak on the phone, husband finds Sudegy interactive 3D dental triage system, she pinpoints the hurting tooth on mobile and confirms booking in the middle of the night without saying a word, arriving at the clinic in the morning where the dentist has her full case and tooth identified before the dental chair.",
+  "notes": "100% 2D cartoon animation (Art v2) featuring patient with bandage in agony, worried husband helping, 3D interactive mouth triage app, dental clinic morning arrival with dentist and dental chair, and clear high-converting dental clinic CTA.",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.18,
+  "script": [
+    {
+      "role": "hook",
+      "text": "ضرسها واجعها وما قادرة تتكلم",
+      "keyword": "تتكلم"
+    },
+    {
+      "role": "friction",
+      "text": "الاتصال بنصف الليل والوصف مع وجع الأسنان الحاد مستحيل ويضيع الوقت",
+      "keyword": "الأسنان"
+    },
+    {
+      "role": "system",
+      "text": "فتح لها الزوج فحصا تفاعليا ثلاثي الأبعاد لتحدد السن بلمسة واحدة",
+      "keyword": "الأبعاد"
+    },
+    {
+      "role": "booking",
+      "text": "اختارت مكان الألم وأكدت حجزها المباشر فورا دون نطق كلمة واحدة",
+      "keyword": "المباشر"
+    },
+    {
+      "role": "doctor",
+      "text": "وصلت العيادة صباحا والدكتور مستلم تقرير سنها ومستعد لعلاجه قبل الكرسي",
+      "keyword": "الكرسي"
+    },
+    {
+      "role": "cta",
+      "text": "لأصحاب مراكز الأسنان اكتب كلمة عيادة في التعليقات لتجربة النظام الذكي",
+      "keyword": "التعليقات"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "stage",
+      "say": ["hook"],
+      "bg": "room",
+      "chars": [
+        { "id": "p_wife", "type": "patient_pain", "x": 360, "y": 1500, "opts": { "shirt": "#e11d48" } },
+        { "id": "p_hus", "type": "man_gulf", "x": 780, "y": 1500 }
+      ],
+      "els": [
+        { "id": "b_night", "kind": "badge", "color": "danger", "text": "🌙 الساعة ٢:٠٠ بالليل: ألم أسنان مفاجئ وحاد", "x": 160, "y": 480 },
+        { "id": "bub_mute", "kind": "bubble", "text": "آآآخ.. ما قادرة أتكلم في التلفون 😣", "x": 140, "y": 1050 }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "sad", "who": "p_wife" },
+        { "at": 0.2, "do": "pop", "el": "b_night" },
+        { "at": 0.5, "do": "shake", "who": "p_wife" },
+        { "at": 0.8, "do": "sad", "who": "p_hus" },
+        { "at": 1.2, "do": "pop", "el": "bub_mute" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["friction"],
+      "bg": "room",
+      "props": [
+        { "id": "phoneCard", "type": "phoneCallAgony", "x": 250, "y": 620 }
+      ],
+      "chars": [
+        { "id": "p_wife", "type": "patient_pain", "x": 280, "y": 1500, "opts": { "shirt": "#e11d48" } },
+        { "id": "p_hus", "type": "man_gulf", "x": 840, "y": 1500 }
+      ],
+      "els": [
+        { "id": "b_call", "kind": "badge", "color": "danger", "text": "📞 الاتصال بالعيادة والوصف عذاب للمريض", "x": 180, "y": 480 },
+        { "id": "m_fail", "kind": "mark", "ok": false, "x": 490, "y": 1040 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_call" },
+        { "at": 0.6, "do": "point", "who": "p_hus", "side": "l", "hold": 1.2 },
+        { "at": 1.1, "do": "angry", "who": "p_wife" },
+        { "at": 1.5, "do": "pop", "el": "m_fail" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["system"],
+      "bg": "room",
+      "props": [
+        { "id": "triageApp", "type": "smartDentalTriageApp", "x": 240, "y": 620 }
+      ],
+      "chars": [
+        { "id": "p_wife", "type": "patient_pain", "x": 200, "y": 1500, "opts": { "shirt": "#e11d48" } },
+        { "id": "p_hus", "type": "man_gulf", "x": 860, "y": 1500 }
+      ],
+      "els": [
+        { "id": "b_3d", "kind": "badge", "color": "good", "text": "🦷 فم تفاعلي 3D لتحديد السن بلمسة واحدة", "x": 180, "y": 480 },
+        { "id": "bub_hus", "kind": "bubble", "text": "حددي ضرسك هنا بلمسة واحدة 📱", "x": 470, "y": 1050 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_3d" },
+        { "at": 0.6, "do": "point", "who": "p_hus", "side": "l", "hold": 1.5 },
+        { "at": 1.1, "do": "pop", "el": "bub_hus" },
+        { "at": 1.6, "do": "surprise", "who": "p_wife" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["booking"],
+      "bg": "room",
+      "props": [
+        { "id": "xrayCard", "type": "dentalXray", "x": 270, "y": 620 }
+      ],
+      "chars": [
+        { "id": "p_relieved", "type": "patient_happy", "x": 540, "y": 1500, "opts": { "shirt": "#10b981" } }
+      ],
+      "els": [
+        { "id": "b_book", "kind": "badge", "color": "good", "text": "⏱️ تم تأكيد الحجز المباشر في ثوانٍ معدودة", "x": 190, "y": 480 },
+        { "id": "tag_silent", "kind": "badge", "color": "gold", "text": "🔇 بدون أي مكالمة وبدون نطق كلمة واحدة", "x": 180, "y": 1000 },
+        { "id": "m_ok", "kind": "mark", "ok": true, "x": 490, "y": 1120 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_book" },
+        { "at": 0.6, "do": "smile", "who": "p_relieved" },
+        { "at": 1.0, "do": "pop", "el": "tag_silent" },
+        { "at": 1.5, "do": "cheer", "who": "p_relieved" },
+        { "at": 2.0, "do": "pop", "el": "m_ok" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["doctor"],
+      "bg": "clinic",
+      "props": [
+        { "id": "chair", "type": "dentalChair", "x": 80, "y": 1080 },
+        { "id": "dossier", "type": "doctorClinicDossier", "x": 240, "y": 600 }
+      ],
+      "chars": [
+        { "id": "doc", "type": "dentist_doctor", "x": 820, "y": 1500 },
+        { "id": "p_relieved", "type": "patient_happy", "x": 280, "y": 1500, "opts": { "shirt": "#10b981" } }
+      ],
+      "els": [
+        { "id": "b_doc", "kind": "badge", "color": "good", "text": "🩺 الدكتور مستلم السن والأعراض قبل فحص الكرسي", "x": 150, "y": 460 },
+        { "id": "bub_doc", "kind": "bubble", "text": "ملفك جاهز وضرسك محدد بدقة! تفضلي 👍", "x": 130, "y": 1010 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_doc" },
+        { "at": 0.6, "do": "point", "who": "doc", "side": "l", "hold": 1.5 },
+        { "at": 1.1, "do": "pop", "el": "bub_doc" },
+        { "at": 1.6, "do": "smile", "who": "doc" },
+        { "at": 2.0, "do": "nod", "who": "p_relieved" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["cta"],
+      "bg": "clinic",
+      "props": [
+        { "id": "happyTooth", "type": "happyToothSparkle", "x": 250, "y": 620 }
+      ],
+      "chars": [
+        { "id": "doc", "type": "dentist_doctor", "x": 540, "y": 1500 }
+      ],
+      "els": [
+        { "id": "b_cta", "kind": "badge", "color": "good", "text": "📲 اكتب \"عيادة\" في التعليقات ونرسل لك التجربة الحية", "x": 120, "y": 480 },
+        { "id": "bub_cta", "kind": "bubble", "text": "وفّر وقت عيادتك وريّح مرضاك مع Sudegy 🦷", "x": 140, "y": 990 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_cta" },
+        { "at": 0.6, "do": "wave", "who": "doc", "side": "r", "dur": 1.5 },
+        { "at": 1.1, "do": "pop", "el": "bub_cta" },
+        { "at": 1.6, "do": "smile", "who": "doc" }
+      ]
+    }
+  ],
+  "search": [
+    "عيادة أسنان",
+    "حجز عيادة أسنان",
+    "ألم الأسنان",
+    "تطبيق أسنان 3d",
+    "sudegy"
+  ]
+}

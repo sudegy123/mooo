@@ -1,0 +1,228 @@
+{
+  "id": "sudegy-myth-fact-01",
+  "client": "sudegy",
+  "format": "myth-fact",
+  "lang": "ar",
+  "voiceStyle": "rate=+8% natural confident Gulf business creator tone, highly expressive commercial storytelling with clear pauses",
+  "voice": "Fenrir",
+  "maxTempo": 1.15,
+  "minTempo": 0.98,
+  "topic": "حقيقة أم خيال: هل شراء موقع جاهز يزيد مبيعاتك؟ خيال مكلف يضيع ميزانية إعلاناتك. القوالب الجاهزة تعرض بضاعة فقط والعميل يخرج دون أن يشتري أو يترك بياناته. الحل بنظام ذكي يفرز العميل ويقفل الطلب بالواتساب.",
+  "notes": "Spacious, non-overlapping TikTok myth-fact video (18-21s) in pure light office mode: Bu Saad struggling with a generic template store, wasted ad clicks, Noura presenting Sudegy's smart qualification funnel and instant WhatsApp order dossier.",
+  "hookPattern": "contrarian",
+  "emotion": "empathy for a daily pain, fear of a real avoidable loss",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.16,
+  "search": [
+    "موقع جاهز",
+    "متجر الكتروني",
+    "زيادة المبيعات",
+    "نظام ذكي سوديجي"
+  ],
+  "script": [
+    {
+      "role": "hook",
+      "text": "الموقع الجاهز يرفع مبيعاتك؟ خيال؟",
+      "keyword": "مبيعاتك"
+    },
+    {
+      "role": "reveal",
+      "text": "خيال مكلف يضيع ميزانيتك الإعلانية.",
+      "keyword": "خيال"
+    },
+    {
+      "role": "why",
+      "text": "القوالب الجاهزة تعرض بضاعة فقط، والعميل يخرج دون أن يشتري أو يترك بياناته.",
+      "keyword": "القوالب"
+    },
+    {
+      "role": "fix",
+      "text": "أنظمتنا الذكية تفلتر العميل وتصلك طلباته مؤكدة على الواتساب.",
+      "keyword": "الواتساب"
+    },
+    {
+      "role": "cta",
+      "text": "اكتب خرافة أخرى تريد فحصها في التعليقات.",
+      "keyword": "التعليقات"
+    }
+  ],
+  "hooks": [
+    {
+      "text": "متجرك الجاهز يرفع أرباحك؟ خيال؟",
+      "keyword": "أرباحك",
+      "pattern": "outcome_first"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "stage",
+      "say": ["hook"],
+      "bg": "office",
+      "props": [
+        { "id": "desk", "type": "desk", "x": 100, "y": 1500, "scale": 0.85, "faceOk": true },
+        { "id": "laptop", "type": "laptop", "x": 260, "y": 1330, "scale": 0.85, "faceOk": true }
+      ],
+      "chars": [
+        {
+          "id": "bs",
+          "cast": "bu_saad",
+          "x": 860,
+          "y": 1500,
+          "scale": 1.05,
+          "speaks": true
+        }
+      ],
+      "els": [],
+      "beats": [
+        { "at": 0.2, "do": "face", "who": "bs", "as": "nervous" },
+        { "at": 0.4, "do": "emote", "who": "bs", "kind": "question" },
+        { "at": 1.0, "do": "zoomTo", "who": "bs", "scale": 1.25, "hold": 0.8 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["reveal"],
+      "bg": "office",
+      "props": [
+        { "id": "card_chaos", "type": "bikamChaos", "x": 70, "y": 560, "scale": 0.88, "faceOk": true }
+      ],
+      "chars": [
+        {
+          "id": "bs",
+          "cast": "bu_saad",
+          "x": 880,
+          "y": 1500,
+          "scale": 1.0,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_rev",
+          "kind": "badge",
+          "color": "danger",
+          "text": "🚨 خيال مكلف! هدر لميزانية الإعلانات والعملاء",
+          "x": 140,
+          "y": 450,
+          "faceOk": true
+        },
+        {
+          "id": "m_cross",
+          "kind": "mark",
+          "ok": false,
+          "x": 320,
+          "y": 920,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_rev" },
+        { "at": 0.2, "do": "face", "who": "bs", "as": "shock" },
+        { "at": 0.4, "do": "emote", "who": "bs", "kind": "sweat" },
+        { "at": 0.7, "do": "pop", "el": "m_cross" },
+        { "at": 1.2, "do": "shake", "who": "bs", "dur": 0.8 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["why"],
+      "bg": "office",
+      "props": [
+        { "id": "card_template", "type": "genericTemplateFriction", "x": 70, "y": 570, "scale": 0.88, "faceOk": true }
+      ],
+      "chars": [
+        {
+          "id": "bs",
+          "cast": "bu_saad",
+          "x": 880,
+          "y": 1500,
+          "scale": 1.0,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_why",
+          "kind": "badge",
+          "color": "danger",
+          "text": "📉 ارتداد 80%: الزائر يخرج فوراً دون شراء أو تسجيل",
+          "x": 130,
+          "y": 450,
+          "faceOk": true
+        },
+        {
+          "id": "m_why",
+          "kind": "mark",
+          "ok": false,
+          "x": 320,
+          "y": 930,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_why" },
+        { "at": 0.3, "do": "face", "who": "bs", "as": "dead" },
+        { "at": 0.6, "do": "emote", "who": "bs", "kind": "anger" },
+        { "at": 0.9, "do": "pop", "el": "m_why" },
+        { "at": 1.4, "do": "shake", "who": "bs", "dur": 0.7 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["fix"],
+      "bg": "office",
+      "props": [
+        { "id": "card_funnel", "type": "smartFunnelCard", "x": 70, "y": 570, "scale": 0.88, "faceOk": true }
+      ],
+      "chars": [
+        {
+          "id": "noura",
+          "cast": "noura",
+          "x": 860,
+          "y": 1500,
+          "scale": 1.05,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_fix",
+          "kind": "badge",
+          "color": "good",
+          "text": "⚡ فرز فوري للعميل وتحويل الطلب المؤكد للواتساب",
+          "x": 140,
+          "y": 450,
+          "faceOk": true
+        },
+        {
+          "id": "m_fix",
+          "kind": "mark",
+          "ok": true,
+          "x": 320,
+          "y": 930,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_fix" },
+        { "at": 0.2, "do": "face", "who": "noura", "as": "smug" },
+        { "at": 0.4, "do": "emote", "who": "noura", "kind": "sparkle" },
+        { "at": 0.8, "do": "pop", "el": "m_fix" },
+        { "at": 1.2, "do": "face", "who": "noura", "as": "wow" }
+      ]
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "bg": "light",
+      "comment": "اكتب خرافة أخرى بالتعليقات",
+      "char": {
+        "cast": "noura",
+        "x": 300
+      }
+    }
+  ]
+}

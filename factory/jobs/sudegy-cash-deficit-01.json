@@ -1,0 +1,309 @@
+{
+  "id": "sudegy-cash-deficit-01",
+  "client": "sudegy",
+  "format": "explainer-2d",
+  "lang": "ar",
+  "voiceStyle": "warm, clear, confident Standard Arabic, natural brisk pace like a short TikTok explainer, friendly and direct",
+  "topic": "عجز الكاش في نهاية اليوم عند أصحاب المحلات والمتاجر: كيف تختفي المبالغ بسبب التداخل بين مبيعات الكاش والتحويلات البنكية غير المطابقة، وكيف يحل نظام نقاط البيع السحابي من سودايجي المشكلة بالتدقيق اللحظي الفوري.",
+  "notes": "TikTok cut, 18-24 seconds. Hook of at most six words, spoken from the first frame, pain first. One idea per sentence. No invented numbers or guarantees. The cta asks viewers to comment on cash audit and click bio link. Visuals: 2D art v2, shop owner looking shocked at register / calculator at frame 0, then a consultant explains the cash vs bank conflict, then a cloud audit check with checkmark, and Sudegy branding.",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/tech_drive.wav",
+  "musicVolume": 0.16,
+  "scenes": [
+    {
+      "type": "stage",
+      "say": [
+        "hook"
+      ],
+      "bg": "shop",
+      "chars": [
+        {
+          "id": "own",
+          "type": "seller",
+          "x": 360
+        }
+      ],
+      "props": [
+        {
+          "id": "dk",
+          "type": "desk",
+          "x": 540,
+          "y": 1270
+        },
+        {
+          "id": "lp",
+          "type": "laptop",
+          "x": 760,
+          "y": 1246
+        }
+      ],
+      "els": [
+        {
+          "id": "b1",
+          "kind": "bubble",
+          "text": "الكاش ناقص؟!",
+          "x": 640,
+          "y": 600
+        },
+        {
+          "id": "b2",
+          "kind": "bubble",
+          "text": "وين راح الفرق؟",
+          "x": 700,
+          "y": 750
+        }
+      ],
+      "beats": [
+        {
+          "do": "pop",
+          "el": "b1",
+          "at": 0.0
+        },
+        {
+          "do": "angry",
+          "who": "own",
+          "at": 0.1
+        },
+        {
+          "do": "pop",
+          "el": "b2",
+          "at": 0.6
+        },
+        {
+          "do": "shake",
+          "who": "own",
+          "at": 1.0,
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": [
+        "define"
+      ],
+      "bg": "office",
+      "chars": [
+        {
+          "id": "con",
+          "type": "woman",
+          "x": 300,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "c1",
+          "kind": "card",
+          "color": "gold",
+          "text": "تداخل المدفوعات",
+          "x": 590,
+          "y": 640
+        },
+        {
+          "id": "t1",
+          "kind": "tag",
+          "color": "bad",
+          "text": "كاش غير مطابق",
+          "x": 610,
+          "y": 790
+        },
+        {
+          "id": "t2",
+          "kind": "tag",
+          "color": "gold",
+          "text": "تحويلات بنكية",
+          "x": 610,
+          "y": 900
+        }
+      ],
+      "beats": [
+        {
+          "do": "point",
+          "who": "con",
+          "at": "8%",
+          "side": "r",
+          "hold": 1.8
+        },
+        {
+          "do": "slideIn",
+          "el": "c1",
+          "at": "10%"
+        },
+        {
+          "do": "slideIn",
+          "el": "t1",
+          "at": "35%"
+        },
+        {
+          "do": "slideIn",
+          "el": "t2",
+          "at": "60%"
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": [
+        "benefits"
+      ],
+      "bg": "shop",
+      "chars": [
+        {
+          "id": "own2",
+          "type": "seller",
+          "x": 820
+        }
+      ],
+      "els": [
+        {
+          "id": "k1",
+          "kind": "badge",
+          "color": "gold",
+          "text": "مطابقة فورية",
+          "x": 90,
+          "y": 640
+        },
+        {
+          "id": "k2",
+          "kind": "badge",
+          "color": "good",
+          "text": "ربط سحابي آلي",
+          "x": 90,
+          "y": 800
+        },
+        {
+          "id": "k3",
+          "kind": "badge",
+          "color": "good",
+          "text": "صفر عجز مالي",
+          "x": 90,
+          "y": 960
+        },
+        {
+          "id": "ok",
+          "kind": "mark",
+          "ok": true,
+          "x": 420,
+          "y": 950
+        }
+      ],
+      "beats": [
+        {
+          "do": "slideIn",
+          "el": "k1",
+          "at": "5%"
+        },
+        {
+          "do": "slideIn",
+          "el": "k2",
+          "at": "35%"
+        },
+        {
+          "do": "slideIn",
+          "el": "k3",
+          "at": "65%"
+        },
+        {
+          "do": "pop",
+          "el": "ok",
+          "at": "75%"
+        },
+        {
+          "do": "smile",
+          "who": "own2",
+          "at": "70%"
+        },
+        {
+          "do": "nod",
+          "who": "own2",
+          "at": "80%"
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": [
+        "differ"
+      ],
+      "bg": "office",
+      "chars": [
+        {
+          "id": "adv",
+          "type": "man_gulf",
+          "x": 300,
+          "speaks": true
+        }
+      ],
+      "props": [
+        {
+          "id": "dk2",
+          "type": "desk",
+          "x": 540,
+          "y": 1270
+        },
+        {
+          "id": "lp2",
+          "type": "laptop",
+          "x": 760,
+          "y": 1246
+        }
+      ],
+      "els": [
+        {
+          "id": "d1",
+          "kind": "tag",
+          "color": "good",
+          "text": "تدقيق لحظي دقيق",
+          "x": 560,
+          "y": 720
+        },
+        {
+          "id": "d2",
+          "kind": "tag",
+          "color": "gold",
+          "text": "تحكم كامل بهاتفك",
+          "x": 560,
+          "y": 850
+        }
+      ],
+      "beats": [
+        {
+          "do": "slideIn",
+          "el": "d1",
+          "at": "15%"
+        },
+        {
+          "do": "slideIn",
+          "el": "d2",
+          "at": "50%"
+        },
+        {
+          "do": "nod",
+          "who": "adv",
+          "at": "55%"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "say": [
+        "cta"
+      ],
+      "char": {
+        "type": "woman",
+        "x": 300
+      },
+      "comment": "الرابط في البايو للتجربة"
+    }
+  ],
+  "search": [
+    "عجز الكاش",
+    "مطابقة المبيعات",
+    "نظام كاشير",
+    "نقاط بيع سحابية",
+    "sudegy"
+  ]
+}

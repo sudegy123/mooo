@@ -1,0 +1,325 @@
+{
+  "_about": "Viral format library: the STRUCTURE of a video (what happens, in which order, why people watch to the end and share). Visual style is chosen per scene in the job file. Word limits are per spoken sentence. Sources: 2026 short-form guides (hook in the first 1-2 s, curiosity gap, contrarian open, one CTA, comment-keyword CTA, repeatable series) — treat their numbers as directional. UPDATE 2026-11-12 (measured on @sudegy.clients + TikTok official guidance, docs/tiktok-algorithm-2026-11-12.md): hook max 6 words, pain or result in its first words, spoken from frame 0; scene 0 must be a moving picture (stage, phone or media), never a title text slide.",
+  "dental-empty-chair": {
+    "name_ar": "حل كرسي عيادة الأسنان الفاضي",
+    "why": "Targeting dental clinic owners: the financial pain of empty treatment chairs, solved by Sudegy 3D interactive tooth triage and instant WhatsApp booking.",
+    "length": [18, 25],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "Empty chair pain: why clinic chairs stay empty and patients drop off." },
+      { "role": "cause", "words": [7, 13], "purpose": "Why patients avoid booking: agony of phone calls and vague WhatsApp descriptions." },
+      { "role": "demo", "words": [8, 14], "purpose": "Sudegy interactive 3D dental model: patient pinpoints exact tooth in seconds." },
+      { "role": "outcome", "words": [7, 13], "purpose": "Chair fills up: clinic receives full clinical summary and confirmed booking." },
+      { "role": "cta", "words": [6, 12], "purpose": "Comment keyword 'عيادة' to get the live interactive demo." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Empathetic, punchy, high-conversion Arabic for clinic owners. Focus on empty chair loss, 3D model prototype, and instant WhatsApp booking."
+  },
+  "client-reviews": {
+    "name_ar": "استعراض آراء ومشاريع العملاء",
+    "why": "Social proof with genuine WhatsApp feedback and live system recordings builds maximum trust and high conversion.",
+    "length": [20, 26],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "Opening promise introducing real client experiences. No brand name." },
+      { "role": "mazin", "words": [8, 14], "purpose": "Dr. Mazin clinical intake system and his genuine review." },
+      { "role": "andoria", "words": [8, 14], "purpose": "Andoria solar calculator and their genuine review." },
+      { "role": "kf", "words": [8, 14], "purpose": "KF Beauty cosmetics store and their genuine review." },
+      { "role": "cta", "words": [5, 9], "purpose": "One call to action to comment and get a tailored system." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Narrate with authority, energy, and warmth. Focus on how custom systems solve operational chaos and create client praise."
+  },
+  "pov-skit": {
+    "name_ar": "موقف يومي (POV)",
+    "why": "Relatable everyday situation in the first second; viewers tag friends who live the same pain; comedy is the strongest organic format in Sudan's TikTok.",
+    "length": [14, 24],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "Name the relatable moment as it happens (لما ... / تخيل ...). No brand name." },
+      { "role": "escalate", "words": [6, 10], "purpose": "The situation gets worse in a funny, believable way." },
+      { "role": "twist", "words": [6, 10], "purpose": "The real cause, said simply." },
+      { "role": "fix", "words": [7, 11], "purpose": "How the product removes the cause (one concrete action in the app)." },
+      { "role": "cta", "words": [5, 9], "purpose": "One ask: comment a keyword, or try the app. Echo a word from the hook so the video loops." }
+    ],
+    "loop": true,
+    "cta": "comment_keyword",
+    "brain": "Write it like a short comedy skit narrated in one voice. Concrete, visual, everyday. No lecture, no statistics."
+  },
+  "myth-fact": {
+    "name_ar": "خرافة ولا حقيقة؟",
+    "why": "A contrarian question opens a curiosity gap; people comment their guess before the reveal.",
+    "length": [12, 20],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "State a common belief as a question: «... خرافة ولا حقيقة؟»" },
+      { "role": "reveal", "words": [3, 7], "purpose": "The verdict in one short sentence (خرافة / حقيقة جزئياً)." },
+      { "role": "why", "words": [8, 13], "purpose": "The simple, true reason. No numbers unless supplied as facts." },
+      { "role": "fix", "words": [7, 11], "purpose": "How the product helps you act on the truth." },
+      { "role": "cta", "words": [5, 9], "purpose": "Ask for the next myth in the comments (series hook)." }
+    ],
+    "loop": false,
+    "cta": "comment_next",
+    "brain": "The belief must be one real people repeat. The verdict must be defensible from the supplied facts only."
+  },
+  "five-sec-quiz": {
+    "name_ar": "تحدي ٥ ثواني",
+    "why": "Viewers answer in the comments; the answer arrives only at the end, so they watch to the end and often rewatch.",
+    "length": [10, 16],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "A quick question with 2-3 options the viewer can answer in 5 seconds." },
+      { "role": "think", "words": [4, 8], "purpose": "Invite them to write their answer before the reveal." },
+      { "role": "answer", "words": [6, 11], "purpose": "The answer and why, simply." },
+      { "role": "cta", "words": [5, 9], "purpose": "How the app helps you know your own answer." }
+    ],
+    "loop": false,
+    "cta": "comment_answer",
+    "brain": "Options must be short words that fit on a button. The answer must come from the supplied facts."
+  },
+  "three-mistakes": {
+    "name_ar": "٣ أخطاء",
+    "why": "A numbered promise sets clear progress; viewers stay for number three and save the video.",
+    "length": [20, 32],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "«٣ أخطاء ... (topic)» framed as something the viewer may be doing now." },
+      { "role": "m1", "words": [6, 10], "purpose": "Mistake one, concrete." },
+      { "role": "m2", "words": [6, 10], "purpose": "Mistake two, concrete." },
+      { "role": "m3", "words": [6, 10], "purpose": "Mistake three, the most surprising." },
+      { "role": "fix", "words": [7, 11], "purpose": "One way to avoid all three with the product." },
+      { "role": "cta", "words": [5, 9], "purpose": "Save the video / comment a keyword." }
+    ],
+    "loop": false,
+    "cta": "save_or_comment",
+    "brain": "Mistakes must be true and specific to the supplied facts. Number words in Arabic letters, not digits."
+  },
+  "pain-demo": {
+    "name_ar": "ألم ثم حل (شرح التطبيق)",
+    "why": "Pain first earns attention; a real app demo earns trust; best for explainers and lead generation.",
+    "length": [30, 45],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "The pain as a sharp question." },
+      { "role": "pain", "words": [7, 11], "purpose": "Why it happens." },
+      { "role": "cost", "words": [7, 11], "purpose": "What it costs the viewer (time, money, comfort) without numbers." },
+      { "role": "intro", "words": [7, 10], "purpose": "The product, in one line." },
+      { "role": "step1", "words": [7, 11], "purpose": "First real step in the app." },
+      { "role": "step2", "words": [7, 11], "purpose": "Second real step." },
+      { "role": "step3", "words": [7, 11], "purpose": "Third real step." },
+      { "role": "result", "words": [7, 11], "purpose": "What the viewer gets." },
+      { "role": "cta", "words": [6, 9], "purpose": "One ask." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Every step must match a real screen in the recording."
+  },
+  "reply-comment": {
+    "name_ar": "رد على تعليق",
+    "why": "Answering a real-sounding question builds community and invites more questions (a content engine).",
+    "length": [14, 24],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "Read the viewer question as it appears in the comment bubble." },
+      { "role": "answer", "words": [7, 12], "purpose": "The direct answer first." },
+      { "role": "show", "words": [7, 12], "purpose": "Show it in the app." },
+      { "role": "cta", "words": [5, 9], "purpose": "Ask for the next question." }
+    ],
+    "loop": false,
+    "cta": "comment_question",
+    "brain": "The question must be one customers really ask; never invent a username or attribute it to a real person."
+  },
+  "satisfying-reveal": {
+    "name_ar": "مشهد مُرضٍ للعين",
+    "why": "Visually satisfying motion (liquid, 3D, microscope) is watched twice and loops; best for brand awareness.",
+    "length": [6, 10],
+    "roles": [
+      { "role": "line", "words": [6, 11], "purpose": "One elegant line that names the brand promise." }
+    ],
+    "loop": true,
+    "cta": "none",
+    "brain": "One line only. No claims."
+  },
+  "series-episode": {
+    "name_ar": "حلقة من سلسلة",
+    "why": "A recurring character and title card turns viewers into followers who wait for the next episode.",
+    "length": [15, 25],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "«الحلقة ...: (situation)» with the recurring character." },
+      { "role": "problem", "words": [6, 11], "purpose": "The episode's problem." },
+      { "role": "turn", "words": [6, 11], "purpose": "The funny or surprising turn." },
+      { "role": "fix", "words": [7, 11], "purpose": "The product moment." },
+      { "role": "cta", "words": [5, 9], "purpose": "Tease the next episode; ask to follow." }
+    ],
+    "loop": false,
+    "cta": "follow",
+    "brain": "Keep the same character name and personality across episodes."
+  },
+  "explainer-2d": {
+    "name_ar": "شرح مبسط (2D)",
+    "why": "Clear visual education that answers a key business question, establishes authority, and presents a superior solution.",
+    "length": [18, 28],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "A sharp question introducing the concept to business owners." },
+      { "role": "define", "words": [7, 12], "purpose": "Plain definition of the concept in everyday language." },
+      { "role": "benefits", "words": [7, 12], "purpose": "Core business benefits and revenue protection." },
+      { "role": "differ", "words": [7, 12], "purpose": "How we uniquely differ from other software companies." },
+      { "role": "cta", "words": [6, 11], "purpose": "Clear call to action to comment industry or business type." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Explain with high authority and zero jargon. Focus on operational clarity, customer retention, and tailored systems."
+  },
+  "calculator-guide": {
+    "name_ar": "دليل استخدام الحاسبة (خطوة بخطوة)",
+    "why": "Clear, practical, step-by-step app walkthrough showing how easy it is to calculate solar needs across all sectors in Sudan.",
+    "length": [24, 38],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "A sharp question showing how simple it is to calculate solar without complexity." },
+      { "role": "sectors", "words": [8, 14], "purpose": "Explaining that the app covers all sectors: farms, workshops, homes, pharmacies, hospitals." },
+      { "role": "step1", "words": [7, 13], "purpose": "Step one: writing your name, phone, activity, and blackout hours." },
+      { "role": "step2", "words": [8, 14], "purpose": "Step two: choosing appliances from fridges to submersible pumps, mills, and poultry lights." },
+      { "role": "result", "words": [7, 13], "purpose": "The result: instant technical recommendation with panels, batteries, and inverter capacity." },
+      { "role": "cta", "words": [6, 11], "purpose": "One clear ask to comment the keyword to receive the app link." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Warm Sudanese practical tone. Emphasize that the app is simple and easy with zero complexity. Name the specific sectors and equipment."
+  },
+  "sudan-business-systems": {
+    "name_ar": "إعلان أنظمة الأعمال للسوق السوداني",
+    "why": "Direct, honest, mobile-first business pitch for Sudanese retail, hospitality, pharmacy, and enterprise owners.",
+    "length": [22, 38],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "A sharp question calling out paper receipts and messy Excel confusion." },
+      { "role": "sectors", "words": [8, 15], "purpose": "Showing that it covers supermarkets, restaurants, pharmacies, and companies, managing everything from your phone." },
+      { "role": "modules", "words": [8, 15], "purpose": "All modules connected: inventory, sales, delivery, accounting, and marketing." },
+      { "role": "differ", "words": [8, 14], "purpose": "The Sudegy difference: we study your workflow first, then build a custom modern system." },
+      { "role": "cta", "words": [6, 13], "purpose": "One clear ask to comment business type to get a tailored system." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Authentic Sudanese colloquial Arabic. Confident, direct, and honest. Address business owners directly. No fake numbers or exaggerations."
+  },
+  "dental-smart-triage": {
+    "name_ar": "فرز واستقبال مرضى عيادات الأسنان",
+    "why": "Targeting dental clinic owners and doctors: captures midnight toothache bookings, pre-qualifies patient pain via interactive 3D mouth, delivers organized summary on WhatsApp before chair examination.",
+    "length": [22, 36],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "Doctor/clinic pain: losing midnight emergency toothache bookings and vague phone descriptions." },
+      { "role": "intro", "words": [7, 14], "purpose": "Introducing Sudegy interactive 3D mouth check for dental clinics." },
+      { "role": "demo", "words": [8, 15], "purpose": "Patient taps tooth, selects symptoms, and gets instant clinical guidance." },
+      { "role": "outcome", "words": [8, 15], "purpose": "Clinic receives organized summary on WhatsApp before patient enters chair." },
+      { "role": "cta", "words": [7, 14], "purpose": "Sudegy bespoke engineering CTA: contact us at sudegy.com." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Professional, authoritative, empathetic Arabic for doctors. Highlight patient experience, 3D interaction, and WhatsApp clinical summary."
+  },
+  "before-after-review": {
+    "name_ar": "قبل وبعد مع رأي العميل الحقيقي",
+    "why": "TikTok before & after transformation: showing the contrast between a basic template and a bespoke luxury e-commerce brand, backed by real client WhatsApp praise.",
+    "length": [22, 34],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "Punchy hook on transforming an online store into a high-end luxury brand." },
+      { "role": "before", "words": [7, 13], "purpose": "Calling out the flaws of the old Wix template (slow, clunky, generic layout)." },
+      { "role": "after", "words": [8, 14], "purpose": "Showcasing the bespoke store by Sudegy (luxury Dubai perfume brand, fast, WhatsApp checkout)." },
+      { "role": "review", "words": [7, 13], "purpose": "Highlighting the client's genuine WhatsApp review: 'this is a world-class achievement'." },
+      { "role": "cta", "words": [7, 13], "purpose": "Call to action to build your custom store via Sudegy." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Fast, high-energy TikTok tone. Contrasting amateur template vs bespoke world-class store with authentic client feedback."
+  },
+  "crm-masterclass": {
+    "name_ar": "درس تعليمي: نظام إدارة علاقات العملاء (CRM)",
+    "why": "High-retention 2D educational masterclass breaking down CRM concept, business ROI, 3 core types, customer retention mechanics, and why it is indispensable for serious businesses.",
+    "length": [30, 48],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "Opening question on why businesses lose leads and need CRM." },
+      { "role": "define", "words": [8, 12], "purpose": "Plain definition of CRM as a unified customer digital memory." },
+      { "role": "benefits", "words": [8, 12], "purpose": "Core benefit of stopping lead leaks and automated deal tracking." },
+      { "role": "types", "words": [8, 12], "purpose": "The three core CRM types: operational, collaborative, analytical." },
+      { "role": "retention", "words": [8, 12], "purpose": "How it organizes customer service history and follow-ups." },
+      { "role": "importance", "words": [8, 12], "purpose": "Why customer retention is far cheaper and vital for growth." },
+      { "role": "differ", "words": [8, 12], "purpose": "Sudegy consultative audit and bespoke system with zero subscriptions." },
+      { "role": "cta", "words": [7, 11], "purpose": "Ask viewer to comment their industry to design their custom CRM." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Deliver clear, authoritative, and honest business education with high energy and zero tech fluff."
+  },
+  "sneakers-store-showcase": {
+    "name_ar": "عرض متجر أحذية مخصص فائق السرعة",
+    "why": "TikTok e-commerce store showcase: hitting customer pain points in shoe stores (slow speeds, sizing confusion, abandoned checkout) and demonstrating Sudegy's sleek, instant-sizing, WhatsApp-integrated sneaker store.",
+    "length": [20, 28],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "Sharp hook on why shoe stores lose buyers: slow sites, size confusion, abandoned carts." },
+      { "role": "pain", "words": [7, 13], "purpose": "Calling out the real friction: complicated checkout, hidden sizes, and slow loading." },
+      { "role": "demo", "words": [8, 14], "purpose": "Showing the solution: bespoke ultra-fast sneaker store with instant EU sizing." },
+      { "role": "outcome", "words": [7, 14], "purpose": "1-click cart and instant order directly on WhatsApp without friction." },
+      { "role": "cta", "words": [7, 13], "purpose": "Sudegy custom store CTA: build your high-converting store at Sudegy.com." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Fast, high-energy TikTok tone. Emphasize speed, frictionless sizing, and direct WhatsApp conversion."
+  },
+  "erp-masterclass": {
+    "name_ar": "درس تعليمي: نظام إدارة موارد المؤسسات (ERP)",
+    "why": "High-retention TikTok educational masterclass breaking down ERP concept, operational transformation, business ROI, hitting client pain points (Excel chaos, inventory loss, isolated silos), and honest consultative truth.",
+    "length": [28, 45],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "Opening question hitting business pain: sales selling out-of-stock items, cash and profit leaks." },
+      { "role": "define", "words": [8, 15], "purpose": "Plain definition of ERP as the central brain connecting all departments in one unified screen." },
+      { "role": "workflow", "words": [8, 15], "purpose": "How ERP transforms workflow: real-time automated data flow instead of isolated Excel silos." },
+      { "role": "benefits", "words": [8, 15], "purpose": "Direct business benefits: stopping leaks, preventing inventory waste, and live profit metrics." },
+      { "role": "honesty", "words": [10, 18], "purpose": "Honest truth: why 70% of ERPs fail (rigid templates) and Sudegy audits workflow first." },
+      { "role": "cta", "words": [8, 14], "purpose": "Ask viewer to comment their industry or business activity to see how ERP fits their cycle." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Deliver clear, authoritative, and honest business education with high energy, natural human phrasing, and zero tech fluff."
+  },
+  "smart-funnel-sales": {
+    "name_ar": "إعلان باقة التحويل الذكي (عروض نوفمبر)",
+    "why": "High-converting TikTok direct-response ad hitting the 'how much?' / lost ad spend pain, presenting the 3-pillar Smart Funnel solution, the 1,990 SAR offer in 3 days, and driving live demo comments.",
+    "length": [28, 42],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "Opening pain question: ad spend wasted on 'how much?' and lost WhatsApp chats." },
+      { "role": "funnel", "words": [8, 14], "purpose": "First pillar: Smart Funnel qualifying pain, service, and budget in seconds." },
+      { "role": "dossier", "words": [8, 14], "purpose": "Second pillar: WhatsApp handoff with full customer dossier ready to buy." },
+      { "role": "crm", "words": [8, 14], "purpose": "Third pillar: Built-in internal CRM to log leads and track sales to close." },
+      { "role": "offer", "words": [8, 15], "purpose": "November offer: complete package at 1,990 SAR ready in 3 days." },
+      { "role": "cta", "words": [8, 14], "purpose": "Call to action: comment 'interested' or DM for 30s live demo." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Deliver punchy, high-energy sales copy addressing Gulf business owners. Clear, honest, zero fluff."
+  },
+  "dental-smart-clinic": {
+    "name_ar": "قصة مريض أسنان: حجز ذكي بدون مكالمات",
+    "why": "High-retention relatable pain skit hitting the agony of dental pain and impossible phone calls, demonstrating Sudegy 3D interactive tooth selector, zero-call booking, and pre-informed doctor in clinic.",
+    "length": [28, 40],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "Relatable excruciating toothache pain: patient unable to speak on phone." },
+      { "role": "friction", "words": [7, 13], "purpose": "The agony of calling the clinic and struggling to explain over the phone." },
+      { "role": "system", "words": [8, 14], "purpose": "Discovering the smart dental system: interactive 3D mouth to pinpoint hurting tooth." },
+      { "role": "booking", "words": [8, 14], "purpose": "Fast booking in seconds without uttering a single word." },
+      { "role": "doctor", "words": [8, 14], "purpose": "Inside clinic: doctor already knows tooth and symptoms before chair examination." },
+      { "role": "cta", "words": [7, 13], "purpose": "Call to action for dental clinic owners: comment 'عيادة' to get the live demo." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Deliver punchy, empathetic, and relatable storytelling in Saudi/Gulf-friendly standard Arabic with high visual contrast."
+  },
+  "flower-store-tv-showcase": {
+    "name_ar": "استعراض متجر ورد على شاشة تلفاز (عروض نوفمبر)",
+    "why": "High-retention TikTok showcase displaying bespoke handmade satin flower ecommerce store on a full widescreen TV display, highlighting high-speed browsing, WhatsApp 1-click cart, zero platform commissions, and November special offer.",
+    "length": [28, 45],
+    "roles": [
+      { "role": "hook", "words": [3, 6], "purpose": "Opening pain question: why flower stores lose customers (slow sites that hide bouquet luxury)." },
+      { "role": "showcase", "words": [8, 15], "purpose": "Showcase on widescreen TV: bespoke satin flower store with smooth browsing and crystal clarity." },
+      { "role": "experience", "words": [8, 15], "purpose": "Customer experience: 1-click add to cart with instant checkout directly on WhatsApp." },
+      { "role": "value", "words": [8, 15], "purpose": "Value proposition: ultra-fast speed, premium brand identity, and zero platform cuts." },
+      { "role": "offer", "words": [8, 15], "purpose": "November special offer: bespoke store at exceptional investment, ready in 3 days." },
+      { "role": "cta", "words": [8, 14], "purpose": "Call to action: comment 'متجر' to receive live demo link." }
+    ],
+    "loop": false,
+    "cta": "comment_keyword",
+    "brain": "Deliver clear, elegant, and persuasive showcase in Arabic, highlighting craftsmanship, speed, and business growth."
+  }
+}

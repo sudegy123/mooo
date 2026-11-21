@@ -1,0 +1,332 @@
+{
+  "id": "sudegy-flower-store",
+  "client": "sudegy",
+  "format": "flower-store-tv-showcase",
+  "lang": "ar",
+  "voiceStyle": "natural warm energetic conversational Arabic business creator tone, confident and engaging with natural human pauses",
+  "voice": "Fenrir",
+  "maxTempo": 1.12,
+  "minTempo": 1.0,
+  "topic": "High-converting showcase of Sudegy's bespoke satin ribbon flower ecommerce store (flowerstore-4xu.pages.dev) presented on a full widescreen TV display. Solving typical florist ecommerce pain points (slow loading speeds, loss of luxury detail, high third-party aggregator commissions). Featuring instant WhatsApp cart checkout and Sudegy's exclusive November offer (1,990 SAR, ready in 3 days).",
+  "notes": "Premium TikTok showcase with widescreen 4K TV display mockup showing genuine screen recordings of flowerstore-4xu.pages.dev, 2D character presenting the store, and November offer card.",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.15,
+  "script": [
+    {
+      "role": "hook",
+      "text": "ليه متاجر الورد تفقد زبائنها؟ لأن الموقع بطيء وتصميمه لا يظهر فخامة الباقات.",
+      "keyword": "فخامة"
+    },
+    {
+      "role": "showcase",
+      "text": "شوف هذا المتجر المخصص لورود الساتان تصفح انسيابي وتفاصيل واضحة على كل شاشة.",
+      "keyword": "الساتان"
+    },
+    {
+      "role": "experience",
+      "text": "العميل يختار باقته المفضلة ويضيفها للسلة مع إتمام الطلب مباشرة على الواتساب.",
+      "keyword": "الواتساب"
+    },
+    {
+      "role": "value",
+      "text": "متجر فائق السرعة يعطيك هوية راقية ويرفع مبيعاتك دون دفع عمولات للمنصات.",
+      "keyword": "السرعة"
+    },
+    {
+      "role": "offer",
+      "text": "ضمن عروض نوفمبر نوفر لك متجرا مخصصا باستثمار استثنائي وجاهزا خلال ثلاثة أيام.",
+      "keyword": "نوفمبر"
+    },
+    {
+      "role": "cta",
+      "text": "اكتب متجر في التعليقات ونرسل لك رابط التجربة الحية لتشاهد المتجر بنفسك.",
+      "keyword": "التعليقات"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "stage",
+      "say": ["hook"],
+      "bg": "luxury",
+      "chars": [
+        {
+          "id": "c_host",
+          "type": "woman",
+          "x": 160,
+          "y": 1500,
+          "scale": 0.68,
+          "opts": {
+            "scarf": "#be185d",
+            "dress": "#1e141a"
+          }
+        }
+      ],
+      "els": [
+        {
+          "id": "tv_main",
+          "kind": "tv",
+          "src": "flower_clip_hero",
+          "show": true,
+          "w": 920,
+          "x": 80,
+          "y": 530,
+          "brand": "SUDEGY 4K"
+        },
+        {
+          "id": "b_pain",
+          "kind": "badge",
+          "color": "danger",
+          "text": "🚨 بطء الموقع يخفي فخامة الورد",
+          "x": 300,
+          "y": 1220
+        }
+      ],
+      "beats": [
+        { "do": "sad", "who": "c_host", "at": 0.2 },
+        { "do": "shake", "who": "c_host", "at": 1.2, "dur": 0.8 },
+        { "do": "pop", "el": "b_pain", "at": 1.5 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["showcase"],
+      "bg": "luxury",
+      "chars": [
+        {
+          "id": "c_host",
+          "type": "woman",
+          "x": 160,
+          "y": 1500,
+          "scale": 0.68,
+          "opts": {
+            "scarf": "#db2777",
+            "dress": "#1e141a"
+          }
+        }
+      ],
+      "els": [
+        {
+          "id": "tv_main",
+          "kind": "tv",
+          "src": "flower_clip_hero",
+          "show": true,
+          "w": 920,
+          "x": 80,
+          "y": 530,
+          "brand": "SUDEGY 4K"
+        },
+        {
+          "id": "b_clarity",
+          "kind": "badge",
+          "color": "good",
+          "text": "🌸 تصفح سلس بدقة فائقة 4K",
+          "x": 320,
+          "y": 1220
+        }
+      ],
+      "beats": [
+        { "do": "smile", "who": "c_host", "at": 0.2 },
+        { "do": "point", "who": "c_host", "at": 0.8, "side": "r", "hold": 1.6 },
+        { "do": "pop", "el": "b_clarity", "at": 1.4 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["experience"],
+      "bg": "luxury",
+      "chars": [
+        {
+          "id": "c_host",
+          "type": "woman",
+          "x": 160,
+          "y": 1500,
+          "scale": 0.68,
+          "opts": {
+            "scarf": "#db2777",
+            "dress": "#1e141a"
+          }
+        }
+      ],
+      "els": [
+        {
+          "id": "tv_main",
+          "kind": "tv",
+          "src": "flower_clip_checkout",
+          "show": true,
+          "w": 920,
+          "x": 80,
+          "y": 530,
+          "brand": "SUDEGY 4K"
+        },
+        {
+          "id": "b_cart",
+          "kind": "badge",
+          "color": "good",
+          "text": "🛒 سلة فورية وربط مباشر بالواتساب",
+          "x": 280,
+          "y": 1220
+        }
+      ],
+      "beats": [
+        { "do": "nod", "who": "c_host", "at": 0.2 },
+        { "do": "point", "who": "c_host", "at": 0.9, "side": "r", "hold": 1.5 },
+        { "do": "pop", "el": "b_cart", "at": 1.3 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["value"],
+      "bg": "luxury",
+      "chars": [
+        {
+          "id": "c_host",
+          "type": "woman",
+          "x": 160,
+          "y": 1500,
+          "scale": 0.68,
+          "opts": {
+            "scarf": "#db2777",
+            "dress": "#1e141a"
+          }
+        }
+      ],
+      "els": [
+        {
+          "id": "tv_main",
+          "kind": "tv",
+          "src": "flower_clip_catalog",
+          "show": true,
+          "w": 920,
+          "x": 80,
+          "y": 530,
+          "brand": "SUDEGY 4K"
+        },
+        {
+          "id": "b_speed",
+          "kind": "badge",
+          "color": "good",
+          "text": "⚡ سرعة فائقة بدون عمولات للمنصات",
+          "x": 270,
+          "y": 1220
+        }
+      ],
+      "beats": [
+        { "do": "smile", "who": "c_host", "at": 0.2 },
+        { "do": "cheer", "who": "c_host", "at": 1.1 },
+        { "do": "pop", "el": "b_speed", "at": 1.3 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["offer"],
+      "bg": "luxury",
+      "chars": [
+        {
+          "id": "c_host",
+          "type": "woman",
+          "x": 140,
+          "y": 1500,
+          "scale": 0.68,
+          "opts": {
+            "scarf": "#db2777",
+            "dress": "#1e141a"
+          }
+        }
+      ],
+      "props": [
+        {
+          "id": "offerCard",
+          "type": "novemberStoreOfferCard",
+          "x": 230,
+          "y": 720
+        }
+      ],
+      "els": [
+        {
+          "id": "b_offer",
+          "kind": "badge",
+          "color": "gold",
+          "text": "🌟 عرض نوفمبر الخاص: متجر ورد متكامل",
+          "x": 240,
+          "y": 620
+        },
+        {
+          "id": "tag_deal",
+          "kind": "badge",
+          "color": "good",
+          "text": "💰 1,990 ريال فقط شامل التأسيس والتشغيل",
+          "x": 190,
+          "y": 1140
+        },
+        {
+          "id": "tag_time",
+          "kind": "badge",
+          "color": "gold",
+          "text": "⏱️ جاهز للعمل خلال 3 أيام فقط",
+          "x": 280,
+          "y": 1250
+        },
+        {
+          "id": "stamp_nov",
+          "kind": "stamp",
+          "text": "عرض نوفمبر",
+          "x": 780,
+          "y": 700
+        }
+      ],
+      "beats": [
+        { "do": "pop", "el": "b_offer", "at": 0.2 },
+        { "do": "nod", "who": "c_host", "at": 0.6 },
+        { "do": "show", "el": "tag_deal", "at": 1.1 },
+        { "do": "show", "el": "tag_time", "at": 1.5 },
+        { "do": "stamp", "el": "stamp_nov", "at": 1.8 },
+        { "do": "point", "who": "c_host", "at": 2.2, "side": "r", "hold": 1.5 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["cta"],
+      "bg": "luxury",
+      "chars": [
+        {
+          "id": "c_host",
+          "type": "woman",
+          "x": 200,
+          "y": 1500,
+          "scale": 0.72,
+          "opts": {
+            "scarf": "#db2777",
+            "dress": "#1e141a"
+          }
+        }
+      ],
+      "els": [
+        {
+          "id": "b_cta_box",
+          "kind": "card",
+          "color": "gold",
+          "text": "💬 اكتب 'متجر' في التعليقات ونرسل لك الرابط",
+          "x": 160,
+          "y": 700
+        },
+        {
+          "id": "b_url",
+          "kind": "badge",
+          "color": "good",
+          "text": "🌐 تجربة المتجر: flowerstore-4xu.pages.dev",
+          "x": 190,
+          "y": 830
+        }
+      ],
+      "beats": [
+        { "do": "smile", "who": "c_host", "at": 0.2 },
+        { "do": "wave", "who": "c_host", "at": 0.6, "dur": 1.6, "side": "r" },
+        { "do": "pop", "el": "b_cta_box", "at": 0.8 },
+        { "do": "pop", "el": "b_url", "at": 1.6 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-resolution="portrait"
+  data-composition-variables='[{"id":"name","type":"string","label":"Variant name (output file name)","default":"aesthetic"}]'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Sudegy aesthetic clinics — doctor ad</title>
+    <script src="assets/gsap.min.js"></script>
+    <style>
+__FONTS__
+      :root { --bg: #0a111e; --teal: #22b59a; --teal2: #6fe0c8; --teal3: #0f6b57; --gold: #e6c068; --ink: #eaf4f1; --red: #ff6b6b; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); font-family: "Cairo", system-ui, sans-serif; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; }
+      .bg { position: absolute; inset: 0; }
+      #bgA { background: radial-gradient(900px 800px at 50% 28%, rgba(34,181,154,.20), transparent 70%), linear-gradient(180deg, #070c16 0%, #0e1a2b 55%, #080d17 100%); z-index: 0; }
+      #bgB { background: radial-gradient(1000px 800px at 78% 16%, rgba(34,181,154,.18), transparent 65%), linear-gradient(170deg, #0f2236 0%, #0a1422 50%, #060a12 100%); z-index: 1; opacity: 0; }
+      #bgC { background: radial-gradient(1000px 900px at 50% 40%, rgba(230,192,104,.16), transparent 68%), linear-gradient(180deg, #08101a 0%, #10202e 100%); z-index: 2; opacity: 0; }
+      .scene { position: absolute; inset: 0; z-index: 10; opacity: 0; }
+      .sent { position: absolute; left: 70px; right: 70px; text-align: center; direction: rtl; text-wrap: balance; font-weight: 800; color: var(--ink); line-height: 1.34; }
+      .kw { display: inline-block; color: rgba(234,244,241,.42); }
+      .brand { position: absolute; top: 130px; left: 0; right: 0; text-align: center; direction: ltr; font-size: 38px; font-weight: 800; letter-spacing: 12px; color: var(--teal2); z-index: 12; }
+
+      /* S1 hook: a WhatsApp-style chat where the patient asks the price and disappears */
+      #chatmock { position: absolute; left: 90px; top: 330px; width: 900px; height: 820px; border-radius: 44px; background: #0d1a28; border: 2px solid rgba(34,181,154,.35); box-shadow: 0 40px 100px rgba(0,0,0,.6); overflow: hidden; }
+      #chhead { height: 110px; background: linear-gradient(90deg, #0f6b57, #0b4f41); display: flex; align-items: center; gap: 22px; padding: 0 34px; direction: rtl; }
+      #av { width: 66px; height: 66px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #e8c9b0, #b98a6e); flex: none; }
+      #chname { font-size: 36px; font-weight: 800; color: #fff; } #chstat { font-size: 24px; color: #bfe9de; display: block; font-weight: 600; }
+      .bub { position: absolute; max-width: 560px; padding: 22px 30px; border-radius: 30px; font-size: 44px; font-weight: 700; direction: rtl; opacity: 0; }
+      #b1 { right: 40px; top: 170px; background: #12392f; color: #eaf4f1; border-top-right-radius: 8px; }
+      #b2 { left: 40px; top: 360px; background: #1c2b3d; color: #eaf4f1; border-top-left-radius: 8px; font-size: 40px; }
+      #typing { position: absolute; left: 40px; top: 360px; padding: 26px 34px; border-radius: 30px; background: #1c2b3d; display: flex; gap: 12px; opacity: 0; }
+      #typing i { width: 16px; height: 16px; border-radius: 50%; background: #8aa0b6; display: block; }
+      #seen { position: absolute; right: 44px; top: 560px; font-size: 30px; color: #7fb3a6; font-weight: 700; opacity: 0; direction: rtl; }
+      #gone { position: absolute; left: 0; right: 0; top: 640px; text-align: center; font-size: 36px; color: #8aa0b6; font-weight: 700; opacity: 0; direction: rtl; }
+      #hook { top: 1250px; font-size: 76px; }
+
+      /* S2 pain: the same needle compared like a commodity */
+      #pain { top: 250px; font-size: 70px; }
+      .pc { position: absolute; left: 140px; width: 800px; height: 200px; border-radius: 34px; background: linear-gradient(135deg, #12263a, #0c1828); border: 2px solid rgba(34,181,154,.3); display: flex; align-items: center; gap: 30px; padding: 0 40px; direction: rtl; opacity: 0; }
+      .pc .nd { width: 120px; height: 18px; border-radius: 9px; background: linear-gradient(90deg, #9fb2c6, #e8f0f7); position: relative; flex: none; transform: rotate(-35deg); }
+      .pc .nd::after { content: ""; position: absolute; left: -34px; top: 6px; width: 34px; height: 6px; background: #cfd8e3; }
+      .pc b { font-size: 44px; font-weight: 800; color: var(--ink); flex: 1; }
+      .pc em { font-style: normal; font-size: 46px; font-weight: 900; color: #0a111e; background: linear-gradient(135deg, var(--gold), #f3d98f); border-radius: 26px; padding: 8px 34px; }
+      #pc1 { top: 640px; } #pc2 { top: 880px; } #pc3 { top: 1120px; }
+      #plan_lost { position: absolute; left: 0; right: 0; top: 1400px; text-align: center; font-size: 44px; font-weight: 800; color: var(--red); opacity: 0; direction: rtl; }
+
+      /* S3 cost: hours that never become bookings */
+      #cost { top: 250px; font-size: 70px; }
+      #clock { position: absolute; left: 330px; top: 640px; width: 420px; height: 420px; }
+      
+      .tkt { position: absolute; left: 160px; width: 760px; height: 120px; border-radius: 28px; background: #12263a; border: 2px solid rgba(255,107,107,.45); display: flex; align-items: center; justify-content: space-between; padding: 0 36px; direction: rtl; opacity: 0; }
+      .tkt b { font-size: 38px; font-weight: 700; color: var(--ink); } .tkt em { font-style: normal; font-size: 34px; font-weight: 800; color: var(--red); }
+      #t1 { top: 1130px; } #t2 { top: 1275px; } #t3 { top: 1420px; }
+
+      /* phone + caption */
+      #phone { position: absolute; left: 291px; top: 450px; width: 498px; height: 1045px; border-radius: 72px; background: linear-gradient(145deg, #2a4a52, #0a1118); box-shadow: 0 50px 110px rgba(0,0,0,.65), inset 0 0 0 2px rgba(111,224,200,.5); z-index: 20; opacity: 0; }
+      #screen { position: absolute; left: 14px; top: 14px; width: 470px; height: 1017px; border-radius: 58px; overflow: hidden; background: #0a111e; }
+      #zoom { position: absolute; inset: 0; } #reel { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      #glare { position: absolute; inset: 0; background: linear-gradient(115deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,0) 30%); pointer-events: none; }
+      .ripple { position: absolute; width: 74px; height: 74px; margin: -37px 0 0 -37px; border-radius: 50%; border: 4px solid var(--teal); background: rgba(34,181,154,.35); opacity: 0; pointer-events: none; }
+      .ps { top: 215px; font-size: 56px; opacity: 0; z-index: 25; }
+      .cap { position: absolute; top: 1535px; left: 50px; right: 50px; height: 84px; z-index: 30; opacity: 0; display: flex; justify-content: center; }
+      .cap .pill { display: flex; align-items: center; gap: 18px; direction: rtl; height: 84px; padding: 0 34px 0 40px; border-radius: 42px; background: linear-gradient(135deg, var(--teal2), var(--teal)); color: #06231c; font-size: 42px; font-weight: 800; box-shadow: 0 14px 40px rgba(0,0,0,.5); white-space: nowrap; }
+      .cap .n { width: 50px; height: 50px; border-radius: 50%; background: #06231c; color: var(--teal2); font-size: 30px; font-weight: 900; display: grid; place-items: center; direction: ltr; }
+
+      /* S9 CTA */
+      #wm { position: absolute; top: 560px; left: 0; right: 0; text-align: center; direction: ltr; font-size: 150px; line-height: 1; font-weight: 900; letter-spacing: 14px; color: var(--teal2); }
+      #wmsub { position: absolute; top: 740px; left: 0; right: 0; text-align: center; font-size: 38px; font-weight: 700; color: var(--gold); direction: rtl; }
+      #cta { top: 860px; font-size: 74px; }
+      #ctabar { position: absolute; top: 1230px; left: 300px; width: 480px; height: 12px; border-radius: 6px; background: linear-gradient(90deg, var(--teal3), var(--teal2)); transform-origin: right center; }
+
+      #grain { position: absolute; left: -200px; top: -200px; width: 1480px; height: 2320px; z-index: 40; pointer-events: none; opacity: .09; mix-blend-mode: overlay; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+      #vignette { position: absolute; inset: 0; z-index: 41; pointer-events: none; background: radial-gradient(ellipse at 50% 46%, rgba(0,0,0,0) 52%, rgba(0,0,0,.5) 100%); }
+      .leak { position: absolute; top: -200px; width: 900px; height: 2300px; z-index: 42; pointer-events: none; mix-blend-mode: screen; opacity: 0; filter: blur(70px); background: radial-gradient(ellipse at 50% 50%, rgba(80,230,200,.6) 0%, rgba(34,181,154,.28) 40%, rgba(34,181,154,0) 70%); }
+      #wipe { position: absolute; top: -50px; height: 2020px; width: 380px; z-index: 45; pointer-events: none; opacity: 0; filter: blur(14px); background: linear-gradient(90deg, rgba(111,224,200,0), rgba(160,255,230,.95), rgba(111,224,200,0)); transform: skewX(-12deg); }
+      #label { position: absolute; left: 0; right: 0; top: 1665px; z-index: 50; display: flex; justify-content: center; }
+      #label div { padding: 12px 30px; border-radius: 32px; background: rgba(10,17,30,.92); border: 1.5px solid rgba(34,181,154,.55); color: var(--ink); font-size: 30px; font-weight: 700; direction: rtl; white-space: nowrap; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="__DUR__">
+      <div id="bgA" class="bg"></div><div id="bgB" class="bg"></div><div id="bgC" class="bg"></div>
+
+      <section id="s1" class="scene">
+        <div class="brand">SUDEGY</div>
+        <div id="chatmock">
+          <div id="chhead"><i id="av"></i><div id="chname">عيادة تجميل<span id="chstat">متصل الآن</span></div></div>
+          <div id="b1" class="bub">بكم الإبرة؟</div>
+          <div id="typing"><i></i><i></i><i></i></div>
+          <div id="b2" class="bub">السعر عندنا كذا</div>
+          <div id="seen">✓✓ تمت المشاهدة</div>
+          <div id="gone">لم يرد المريض مرة أخرى</div>
+        </div>
+        <h1 id="hook" class="sent">__S_hook__</h1>
+      </section>
+
+      <section id="s2" class="scene">
+        <div class="brand">SUDEGY</div>
+        <p id="pain" class="sent">__S_pain__</p>
+        <div id="pc1" class="pc"><i class="nd"></i><b>عيادة أ</b><em>بكم؟</em></div>
+        <div id="pc2" class="pc"><i class="nd"></i><b>عيادة ب</b><em>بكم؟</em></div>
+        <div id="pc3" class="pc"><i class="nd"></i><b>عيادتك</b><em>بكم؟</em></div>
+        <div id="plan_lost">الخطة العلاجية وقيمة الطبيب لا تُقارَن</div>
+      </section>
+
+      <section id="s3" class="scene">
+        <div class="brand">SUDEGY</div>
+        <p id="cost" class="sent">__S_cost__</p>
+        <svg id="clock" viewBox="0 0 420 420" aria-hidden="true">
+          <circle cx="210" cy="210" r="196" fill="#0d1a28" stroke="#22b59a" stroke-width="8"/>
+          <circle cx="210" cy="210" r="10" fill="#6fe0c8"/>
+          <line x1="210" y1="210" x2="210" y2="92" stroke="#eaf4f1" stroke-width="12" stroke-linecap="round"/>
+          <line id="hand" x1="210" y1="210" x2="210" y2="52" stroke="#e6c068" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <div id="t1" class="tkt"><b>استشارة مطولة</b><em>لم تنتهِ بحجز</em></div>
+        <div id="t2" class="tkt"><b>استشارة مطولة</b><em>لم تنتهِ بحجز</em></div>
+        <div id="t3" class="tkt"><b>استشارة مطولة</b><em>لم تنتهِ بحجز</em></div>
+      </section>
+
+      <div class="brand" id="brandP" style="opacity:0">SUDEGY</div>
+      <p id="ps_intro" class="sent ps">__S_intro__</p>
+      <p id="ps_questions" class="sent ps">__S_questions__</p>
+      <p id="ps_plan" class="sent ps">__S_plan__</p>
+      <p id="ps_doctor" class="sent ps">__S_doctor__</p>
+      <p id="ps_booking" class="sent ps">__S_booking__</p>
+      <div id="cap1" class="cap"><div class="pill"><i class="n">1</i><span>__CAP1__</span></div></div>
+      <div id="cap2" class="cap"><div class="pill"><i class="n">2</i><span>__CAP2__</span></div></div>
+      <div id="cap3" class="cap"><div class="pill"><i class="n">3</i><span>__CAP3__</span></div></div>
+      <div id="cap4" class="cap"><div class="pill"><i class="n">4</i><span>__CAP4__</span></div></div>
+      <div id="phone"><div id="screen"><div id="zoom"><video id="reel" src="assets/aesthetic_reel.mp4" muted playsinline data-start="__DEMO__" data-duration="__REELDUR__" data-track-index="2"></video></div><div id="glare"></div></div></div>
+
+      <section id="s9" class="scene">
+        <div id="wm">SUDEGY</div>
+        <div id="wmsub">نظام فرز ذكي لعيادات التجميل</div>
+        <p id="cta" class="sent">__S_cta__</p>
+        <div id="ctabar"></div>
+      </section>
+
+__AUDIO__
+      <div id="grain"></div><div id="vignette"></div><i class="leak" id="leakA"></i><i class="leak" id="leakB"></i><div id="wipe"></div>
+__SFX__
+      
+    </div>
+
+    <script>
+      const SCREEN = { w: 470, h: 1017, vw: 390, vh: 844 };
+__TBLOCK__
+      const zoom = document.getElementById("zoom");
+      TAPS.forEach(([t, x, y], i) => { const r = document.createElement("i"); r.className = "ripple"; r.id = "rip" + i; r.style.left = (x / SCREEN.vw * SCREEN.w) + "px"; r.style.top = (y / SCREEN.vh * SCREEN.h) + "px"; zoom.appendChild(r); });
+      const KID = { hook: "hook", pain: "pain", cost: "cost", intro: "ps_intro", questions: "ps_questions", plan: "ps_plan", doctor: "ps_doctor", booking: "ps_booking", cta: "cta" };
+      Object.values(KID).forEach((id) => { const el = document.getElementById(id); const words = el.textContent.trim().split(/\s+/); el.textContent = ""; words.forEach((w, i) => { const s = document.createElement("span"); s.className = "kw"; s.id = id + "-w" + i; s.textContent = w; el.appendChild(s); if (i < words.length - 1) el.appendChild(document.createTextNode(" ")); }); });
+      const tl = gsap.timeline({ paused: true });
+      const W = T.B; // boundaries
+
+      // S1 hook: patient asks the price, the clinic answers, the patient vanishes
+      tl.fromTo("#s1", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "none" }, 0);
+      tl.fromTo("#chatmock", { y: 50, scale: 0.96 }, { y: 0, scale: 1, duration: 0.5, ease: "power3.out" }, 0.05);
+      tl.fromTo("#b1", { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, T.h.b1);
+      tl.fromTo("#typing", { opacity: 0 }, { opacity: 1, duration: 0.2 }, T.h.typ);
+      tl.fromTo("#typing i", { y: 0 }, { y: -10, duration: 0.25, stagger: 0.12, yoyo: true, repeat: 3, ease: "sine.inOut" }, T.h.typ);
+      tl.to("#typing", { opacity: 0, duration: 0.1 }, T.h.b2);
+      tl.fromTo("#b2", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, T.h.b2);
+      tl.fromTo("#seen", { opacity: 0 }, { opacity: 1, duration: 0.3 }, T.h.seen);
+      tl.to("#av", { opacity: 0.12, duration: 0.6 }, T.h.seen + 0.2);
+      tl.to("#chstat", { opacity: 0, duration: 0.3 }, T.h.seen + 0.2);
+      tl.fromTo("#gone", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, T.h.seen + 0.35);
+      tl.to("#s1", { opacity: 0, duration: 0.25, ease: "power2.in" }, W[0] - 0.05);
+
+      // S2 pain
+      tl.fromTo("#s2", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "none" }, W[0] + 0.1);
+      [1, 2, 3].forEach((n, i) => tl.fromTo("#pc" + n, { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.4, ease: "power3.out" }, W[0] + 0.4 + i * 0.35));
+      tl.fromTo("#plan_lost", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4 }, W[1] - 1.5);
+      tl.to("#s2", { opacity: 0, duration: 0.22, ease: "power2.in" }, W[1] - 0.05);
+
+      // S3 cost
+      tl.fromTo("#s3", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "none" }, W[1] + 0.1);
+      tl.fromTo("#hand", { rotation: 0, svgOrigin: "210 210" }, { rotation: 1080, svgOrigin: "210 210", duration: W[2] - W[1] - 0.2, ease: "power1.inOut" }, W[1] + 0.2);
+      [1, 2, 3].forEach((n, i) => tl.fromTo("#t" + n, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, W[1] + 0.9 + i * 0.45));
+      tl.to("#s3", { opacity: 0, duration: 0.22, ease: "power2.in" }, W[2] - 0.05);
+
+      // S4-S8: the real demo in one phone, five voice-led phases
+      tl.fromTo("#bgB", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, W[2] - 0.05);
+      tl.fromTo("#brandP", { opacity: 0 }, { opacity: 1, duration: 0.3 }, W[2] + 0.1);
+      tl.fromTo("#phone", { opacity: 0, y: 80, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "power3.out" }, W[2] + 0.1);
+      ["intro", "questions", "plan", "doctor", "booking"].forEach((k, i) => {
+        const a = W[2 + i], b = W[3 + i];
+        tl.fromTo("#ps_" + k, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, a + 0.05);
+        tl.to("#ps_" + k, { opacity: 0, duration: 0.18, ease: "power2.in" }, b - 0.12);
+        if (i > 0) { const c = "#cap" + i; tl.fromTo(c, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, a + 0.15); tl.to(c, { opacity: 0, y: -12, duration: 0.2, ease: "power2.in" }, b - 0.12); }
+      });
+      TAPS.forEach(([t2], i) => tl.fromTo("#rip" + i, { scale: 0.25, opacity: 0.95 }, { scale: 1.6, opacity: 0, duration: 0.5, ease: "power2.out", immediateRender: false }, T.demo + t2));
+      tl.to("#phone", { opacity: 0, y: -50, scale: 0.97, duration: 0.3, ease: "power2.in" }, T.phoneOut);
+      tl.to("#brandP", { opacity: 0, duration: 0.25 }, T.phoneOut);
+
+      // S9 CTA
+      tl.fromTo("#bgC", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power1.inOut" }, T.ctaIn - 0.05);
+      tl.fromTo("#s9", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "none" }, T.ctaIn);
+      tl.fromTo("#wm", { y: 40, scale: 0.95 }, { y: 0, scale: 1, duration: 0.5, ease: "power3.out" }, T.ctaIn);
+      tl.fromTo("#wmsub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, T.ctaIn + 0.15);
+      tl.fromTo("#cta", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, T.ctaIn + 0.05);
+      tl.fromTo("#ctabar", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.out" }, T.ctaIn + 0.4);
+      tl.fromTo("#s9", { scale: 1 }, { scale: 1.025, duration: 3, ease: "none" }, T.ctaIn + 0.1);
+
+      // motion kit
+      Object.entries(KID).forEach(([k, id]) => (WT[k] || []).forEach(([a, b], i) => {
+        const w = "#" + id + "-w" + i;
+        tl.fromTo(w, { color: "rgba(234,244,241,0.42)" }, { color: "#ffd978", duration: 0.1, ease: "none" }, a);
+        tl.fromTo(w, { scale: 1 }, { scale: 1.1, duration: 0.14, ease: "power2.out", yoyo: true, repeat: 1, transformOrigin: "50% 60%" }, a);
+        tl.to(w, { color: "#eaf4f1", duration: 0.25, ease: "none" }, Math.max(a + 0.12, b));
+      }));
+      for (let g = 0; g * 0.1 < T.end; g++) tl.set("#grain", { x: ((g * 97) % 160) - 80, y: ((g * 53) % 160) - 80 }, g * 0.1);
+      CUTS.forEach((c, i) => {
+        const leak = i % 2 ? "#leakB" : "#leakA";
+        tl.fromTo(leak, { x: i % 2 ? 1300 : -900, opacity: 0 }, { x: i % 2 ? -700 : 1100, opacity: 0.5, duration: 1.1, ease: "sine.inOut" }, c - 0.15);
+        tl.to(leak, { opacity: 0, duration: 0.5, ease: "power1.in" }, c + 0.55);
+        tl.fromTo("#wipe", { x: 1500, opacity: 0.9 }, { x: -520, opacity: 0.9, duration: 0.55, ease: "power2.inOut" }, c - 0.28);
+        tl.set("#wipe", { opacity: 0 }, c + 0.3);
+      });
+      tl.fromTo("#s2", { scale: 1 }, { scale: 1.03, duration: W[1] - W[0], ease: "none" }, W[0]);
+      tl.fromTo("#s3", { scale: 1 }, { scale: 1.03, duration: W[2] - W[1], ease: "none" }, W[1]);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

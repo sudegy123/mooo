@@ -1,0 +1,253 @@
+{
+  "id": "sudegy-whatsapp-qualifier-2d",
+  "client": "sudegy",
+  "format": "pov-skit",
+  "lang": "ar",
+  "voiceStyle": "rate=+10% natural warm engaging Gulf and Standard Arabic creator tone, highly expressive business storytelling with natural human pacing",
+  "voice": "Fenrir",
+  "maxTempo": 1.15,
+  "minTempo": 1.0,
+  "topic": "موقف يومي كوميدي لأصحاب الأعمال والمتاجر: رسائل الواتساب المتكررة التي تسأل بكم ثم يختفي العميل بسبب الرد اليدوي، حتى تتدخل نورة بمسار الفرز الذكي من سوديجي وتحول الاستفسار إلى ملف عميل مؤهل وجاهز للشراء.",
+  "notes": "POV comedy skit (16-22s) featuring Bu Saad (man_gulf), Hamad (seller), and Noura (woman) with Art v2 meme expressions (shock, rage, nervous, wow, smug), camera zoom-in, manga impact lines, and Sudegy smart funnel dossier.",
+  "hookPattern": "pain_callout",
+  "emotion": "empathy",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/playful_comedy.wav",
+  "musicVolume": 0.16,
+  "search": [
+    "انظمة crm",
+    "شرح crm",
+    "تأهيل العملاء",
+    "ادارة مبيعات الواتساب"
+  ],
+  "script": [
+    {
+      "role": "hook",
+      "text": "العميل يسأل بكم ثم يختفي؟",
+      "keyword": "يختفي"
+    },
+    {
+      "role": "escalate",
+      "text": "ترسل السعر يدويا ثم تنتظر الرد دون جدوى.",
+      "keyword": "السعر"
+    },
+    {
+      "role": "twist",
+      "text": "العميل يبحث عن مسار يحدد طلبه بوضوح.",
+      "keyword": "طلبه"
+    },
+    {
+      "role": "fix",
+      "text": "نظام سوديجي ينظم الطلب ويجهزه مباشرة للشراء.",
+      "keyword": "سوديجي"
+    },
+    {
+      "role": "cta",
+      "text": "اكتب كلمة نظام لتمنع خسارة أي عميل.",
+      "keyword": "نظام"
+    }
+  ],
+  "hooks": [
+    {
+      "text": "كيف توقف هروب عملاء الواتساب؟",
+      "keyword": "الواتساب",
+      "pattern": "investigator"
+    },
+    {
+      "text": "توقف عن إرسال الأسعار يدويا.",
+      "keyword": "الأسعار",
+      "pattern": "warning"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "stage",
+      "say": [
+        "hook"
+      ],
+      "bg": "shop",
+      "chars": [
+        {
+          "id": "bu_saad",
+          "cast": "bu_saad",
+          "x": 340,
+          "y": 1500,
+          "speaks": true
+        }
+      ],
+      "props": [
+        {
+          "id": "ph",
+          "type": "phoneHand",
+          "x": 720,
+          "y": 1280
+        }
+      ],
+      "els": [
+        {
+          "id": "b1",
+          "kind": "bubble",
+          "text": "بكم السعر؟ 💬",
+          "x": 580,
+          "y": 600,
+          "faceOk": true
+        },
+        {
+          "id": "b2",
+          "kind": "tag",
+          "color": "bad",
+          "text": "اختفى العميل! ❌",
+          "x": 600,
+          "y": 740,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b1" },
+        { "at": 0.2, "do": "face", "who": "bu_saad", "as": "shock" },
+        { "at": 0.5, "do": "emote", "who": "bu_saad", "kind": "question" },
+        { "at": 0.8, "do": "pop", "el": "b2" },
+        { "at": 1.2, "do": "zoomTo", "who": "bu_saad", "scale": 1.35, "hold": 1.2 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": [
+        "escalate"
+      ],
+      "bg": "shop",
+      "chars": [
+        {
+          "id": "bu_saad",
+          "cast": "bu_saad",
+          "x": 240,
+          "y": 1500
+        },
+        {
+          "id": "hamad",
+          "cast": "hamad",
+          "x": 860,
+          "y": 1500,
+          "speaks": true
+        }
+      ],
+      "props": [
+        {
+          "id": "chaosCard",
+          "type": "bikamChaos",
+          "x": 250,
+          "y": 500
+        }
+      ],
+      "els": [
+        {
+          "id": "tag_waste",
+          "kind": "tag",
+          "color": "bad",
+          "text": "انتظار طويل دون رد ⏱️",
+          "x": 380,
+          "y": 880,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.1, "do": "face", "who": "hamad", "as": "nervous" },
+        { "at": 0.4, "do": "emote", "who": "hamad", "kind": "sweat" },
+        { "at": 0.7, "do": "pop", "el": "tag_waste" },
+        { "at": 1.0, "do": "face", "who": "bu_saad", "as": "rage" },
+        { "at": 1.3, "do": "impact", "who": "bu_saad" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": [
+        "twist"
+      ],
+      "bg": "office",
+      "chars": [
+        {
+          "id": "noura",
+          "cast": "noura",
+          "x": 200,
+          "y": 1500,
+          "speaks": true
+        }
+      ],
+      "props": [
+        {
+          "id": "funnelCard",
+          "type": "smartFunnelCard",
+          "x": 440,
+          "y": 520,
+          "scale": 0.9
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "enter", "who": "noura", "from": "l" },
+        { "at": 0.5, "do": "face", "who": "noura", "as": "smug" },
+        { "at": 0.9, "do": "point", "who": "noura", "side": "r", "hold": 1.6 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": [
+        "fix"
+      ],
+      "bg": "office",
+      "chars": [
+        {
+          "id": "noura",
+          "cast": "noura",
+          "x": 260,
+          "y": 1500
+        },
+        {
+          "id": "bu_saad",
+          "cast": "bu_saad",
+          "x": 840,
+          "y": 1500
+        }
+      ],
+      "props": [
+        {
+          "id": "dossierCard",
+          "type": "whatsappDossier",
+          "x": 240,
+          "y": 520
+        }
+      ],
+      "els": [
+        {
+          "id": "tag_ready",
+          "kind": "tag",
+          "color": "good",
+          "text": "عميل جاهز للشراء ✓",
+          "x": 410,
+          "y": 890,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "tag_ready" },
+        { "at": 0.5, "do": "face", "who": "bu_saad", "as": "wow" },
+        { "at": 0.8, "do": "emote", "who": "bu_saad", "kind": "idea" },
+        { "at": 1.2, "do": "nod", "who": "bu_saad" },
+        { "at": 1.5, "do": "smile", "who": "noura" }
+      ]
+    },
+    {
+      "type": "cta",
+      "say": [
+        "cta"
+      ],
+      "bg": "dark",
+      "comment": "اكتب كلمة نظام في التعليقات",
+      "char": {
+        "cast": "noura",
+        "x": 300
+      }
+    }
+  ]
+}

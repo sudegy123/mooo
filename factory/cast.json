@@ -1,0 +1,50 @@
+{
+  "_about": "Recurring FICTIONAL characters for series (docs/viral-playbook-2026-11-12.md: accounts with a fixed persona build followers; 95% of our viewers were new and none came from the Following feed). Use { \"cast\": \"<id>\" } on a character in a job. These are cartoon characters in skits. Never present them as real customers, never give them quotes about results, and never model them on a real person (AGENTS.md rule 2).",
+  "cast": {
+    "bu_saad": {
+      "name_ar": "أبو سعد",
+      "role_ar": "صاحب محل في الخليج",
+      "type": "man_gulf",
+      "opts": {},
+      "persona": "Practical shop owner who answers every customer himself on WhatsApp and is always one message behind. Proud, a little stubborn, learns by seeing.",
+      "reactions": ["shock", "nervous", "dead", "wow"],
+      "world": "bg shop or room; phoneHand, counter"
+    },
+    "dr_sara": {
+      "name_ar": "د. سارة",
+      "role_ar": "صاحبة عيادة",
+      "type": "doctor_f",
+      "opts": {},
+      "persona": "Careful clinic owner who hates losing evening enquiries and repeating the same answers. Calm until the phone will not stop.",
+      "reactions": ["nervous", "rage", "smug", "love"],
+      "world": "bg clinic; phoneHand, clock"
+    },
+    "am_osman": {
+      "name_ar": "عم عثمان",
+      "role_ar": "تاجر سوداني",
+      "type": "man_sd",
+      "opts": {},
+      "persona": "Veteran Sudanese merchant who trusts his paper ledger and is suspicious of software until he sees his own numbers on the phone.",
+      "reactions": ["dead", "shock", "smug", "wow"],
+      "world": "bg shop; counter, jarShelf, inverter"
+    },
+    "noura": {
+      "name_ar": "نورة",
+      "role_ar": "مستشارة الأنظمة",
+      "type": "woman",
+      "opts": { "scarf": "#0f6b57", "dress": "#22303f" },
+      "persona": "The guide. Asks one sharp question, shows instead of telling, never pushes. She is the only character who speaks for Sudegy.",
+      "reactions": ["smug", "wow"],
+      "world": "bg office; desk, laptop"
+    },
+    "hamad": {
+      "name_ar": "حمد",
+      "role_ar": "موظف المبيعات",
+      "type": "seller",
+      "opts": { "shirt": "#2f74b5" },
+      "persona": "Young salesman who forgets follow-ups and blames the phone. Comic relief; his mistakes start the story.",
+      "reactions": ["nervous", "cry", "shock", "dead"],
+      "world": "bg shop or office; phoneHand, laptop"
+    }
+  }
+}

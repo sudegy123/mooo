@@ -1,0 +1,186 @@
+{
+  "id": "sudegy-sudan-systems",
+  "client": "sudegy",
+  "format": "sudan-business-systems",
+  "lang": "ar",
+  "voiceStyle": "clear, confident, practical and energetic Standard Arabic with natural Sudanese nuance, quick pace",
+  "voice": "Fenrir",
+  "maxTempo": 1.02,
+  "minTempo": 0.92,
+  "topic": "Customized business management systems (ERP, POS, inventory, accounting, delivery, marketing) for supermarkets, restaurants, pharmacies, and companies in Sudan. Manage your entire business from your phone. Eliminating paper loss and Excel chaos. Sudegy studies your business cycle first, then designs a tailored system powered by modern American cloud technology. CTA to comment your business type.",
+  "notes": "2D explainer with Sudanese character man_sd. Scene 0 kinetic hook on paper chaos and Excel confusion. Scene 1 sectors showcase with man_sd and glowing tags (supermarkets, restaurants, pharmacies, companies). Scene 2 smartphone walkthrough with live system screens and step pill. Scene 3 Sudegy study and bespoke engineering method. Scene 4 brand CTA with comment prompt.",
+  "variants": {
+    "hooks": 3
+  },
+  "music": "factory/music/warm_oud_pop.wav",
+  "musicVolume": 0.18,
+  "script": [
+    {
+      "role": "hook",
+      "text": "يا صاحب الشغل، لمتين حتفضل تدير تجارتك بدفاتر الورق ولخبطة شيتات الإكسل؟",
+      "keyword": "الإكسل"
+    },
+    {
+      "role": "sectors",
+      "text": "سواء عندك سوبرماركت، مطعم، صيدلية، أو شركة، هسي بتقدر تتابع شغلك كلو من تلفونك.",
+      "keyword": "تلفونك"
+    },
+    {
+      "role": "modules",
+      "text": "نظام واحد يربط ليك المخزن والمبيعات، حركة التوصيل، الحسابات اليومية، والتسويق بضغطة زر.",
+      "keyword": "المخزن"
+    },
+    {
+      "role": "differ",
+      "text": "نحن في سوديجي بندرس دورتك أولا، بعدين نبني نظامك المخصص بأحدث تكنولوجيا أمريكية.",
+      "keyword": "دورتك"
+    },
+    {
+      "role": "cta",
+      "text": "اكتب نوع شغلك في التعليقات، وخلينا نصمم ليك النظام البيريح بالك ويحمي أرباحك.",
+      "keyword": "التعليقات"
+    }
+  ],
+  "hooks": [
+    {
+      "text": "عايز تتابع مخزنك، مبيعاتك، وحساباتك اليومية لحظة بلحظة وأنت ماسك تلفونك؟",
+      "keyword": "تلفونك",
+      "technique": "relatable question"
+    },
+    {
+      "text": "ليه أغلب البرامج الجاهزة بتفشل في إدارة المحلات والشركات في السودان؟",
+      "keyword": "الجاهزة",
+      "technique": "direct question"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "title",
+      "say": ["hook"],
+      "bg": "dark",
+      "size": 80,
+      "sub": "أنظمة إدارة الأعمال الذكية من سوديجي"
+    },
+    {
+      "type": "stage",
+      "say": ["sectors"],
+      "bg": "light",
+      "chars": [
+        {
+          "id": "m",
+          "type": "man_sd",
+          "x": 360,
+          "opts": {}
+        }
+      ],
+      "els": [
+        {
+          "id": "t_super",
+          "kind": "tag",
+          "text": "سوبرماركت ومخازن وباركود",
+          "x": 340,
+          "y": 960,
+          "color": "good"
+        },
+        {
+          "id": "t_rest",
+          "kind": "tag",
+          "text": "مطاعم وكافيهات وديليفري",
+          "x": 380,
+          "y": 1080,
+          "color": "gold"
+        },
+        {
+          "id": "t_pharm",
+          "kind": "tag",
+          "text": "صيدليات وروشتات وصلاحيات",
+          "x": 340,
+          "y": 1200,
+          "color": "good"
+        },
+        {
+          "id": "t_corp",
+          "kind": "tag",
+          "text": "شركات ومحاسبة ومعاملات",
+          "x": 380,
+          "y": 1320,
+          "color": "gold"
+        }
+      ],
+      "beats": [
+        { "at": 0.4, "do": "point", "who": "m", "side": "r", "hold": 2.2 },
+        { "at": 0.6, "do": "pop", "el": "t_super" },
+        { "at": 1.2, "do": "pop", "el": "t_rest" },
+        { "at": 1.8, "do": "pop", "el": "t_pharm" },
+        { "at": 2.4, "do": "pop", "el": "t_corp" },
+        { "at": 3.0, "do": "nod", "who": "m" }
+      ]
+    },
+    {
+      "type": "phone",
+      "group": "app",
+      "say": ["modules"],
+      "side": {
+        "type": "man_sd"
+      },
+      "pill": "١. كل أقسام شغلك في شاشة تلفونك",
+      "clip": "sudegy_os_mobile"
+    },
+    {
+      "type": "stage",
+      "say": ["differ"],
+      "bg": "light",
+      "chars": [
+        {
+          "id": "m2",
+          "type": "man_sd",
+          "x": 360,
+          "opts": {}
+        }
+      ],
+      "els": [
+        {
+          "id": "step_audit",
+          "kind": "tag",
+          "text": "١. دراسة دورتك وثغرات الهدر",
+          "x": 340,
+          "y": 1000,
+          "color": "good"
+        },
+        {
+          "id": "step_build",
+          "kind": "tag",
+          "text": "٢. تصميم نظام سحابي على مقاسك",
+          "x": 380,
+          "y": 1140,
+          "color": "gold"
+        },
+        {
+          "id": "step_tech",
+          "kind": "tag",
+          "text": "٣. أحدث تكنولوجيا أمريكية على تلفونك",
+          "x": 340,
+          "y": 1280,
+          "color": "good"
+        }
+      ],
+      "beats": [
+        { "at": 0.4, "do": "point", "who": "m2", "side": "r", "hold": 2.2 },
+        { "at": 0.7, "do": "pop", "el": "step_audit" },
+        { "at": 1.4, "do": "pop", "el": "step_build" },
+        { "at": 2.1, "do": "pop", "el": "step_tech" },
+        { "at": 2.8, "do": "nod", "who": "m2" }
+      ]
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "char": {
+        "type": "man_sd",
+        "x": 300
+      },
+      "comment": "اكتب نوع شغلك في التعليقات"
+    }
+  ]
+}
+

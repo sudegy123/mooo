@@ -1,0 +1,119 @@
+{
+  "_about": "Hook patterns for the copy step (factory/lib/copy.cjs). Evidence and sources: docs/viral-playbook-2026-11-12.md. The examples show the STRUCTURE only; the brain writes the real hook for each job (AGENTS.md rule 3). Every hook: 6 words or fewer, no digits, no brand name, no guarantee, and the first frame must show what the line says.",
+  "patterns": [
+    {
+      "id": "outcome_first",
+      "name_ar": "النتيجة أولاً",
+      "how": "Open on the finished result; the line names what the viewer already sees working.",
+      "examples_ar": ["كل طلباتك في شاشة واحدة.", "حجوزات الليل تصلك جاهزة."],
+      "first_frame": "The result itself at 0.0 s: the organised screen, the booking message arriving, the calm owner.",
+      "emotion": "relief",
+      "evidence": "OpusClip 34,635 clips: best hook type; ViralVideoSearch: 53% of viral videos open on a visual hook.",
+      "honesty": "Show only what the product really does. No invented results or numbers."
+    },
+    {
+      "id": "pain_callout",
+      "name_ar": "ألم يومي",
+      "how": "Name the daily pain in the viewer's own words, in the first three words.",
+      "examples_ar": ["عملاء الواتساب يضيعون وسط الرسائل؟", "المريض يسأل بكم ويختفي؟"],
+      "first_frame": "The pain happening: messages flooding in, a phone ringing unanswered, a stressed face.",
+      "emotion": "empathy",
+      "evidence": "Chinese pain-point hook family; best average watch time on @sudegy.clients before 2026-11-12 (smart-funnel).",
+      "honesty": "A pain the vertical really has (sudegy_brain VERTICALS). No statistics."
+    },
+    {
+      "id": "contrarian",
+      "name_ar": "عكس الشائع",
+      "how": "Reject a common belief in one short line; the video then backs it up.",
+      "examples_ar": ["الموقع الجميل لا يجيب عملاء.", "الإكسل ليس نظام إدارة."],
+      "first_frame": "The believed thing with a red mark landing on it, or a character shaking the head at it.",
+      "emotion": "curiosity",
+      "evidence": "ContentLabs 3,997 videos: hot-take openings averaged about 140K views; OpusClip contrarian type.",
+      "honesty": "Only when the body of the video supports the claim. Never attack a named competitor."
+    },
+    {
+      "id": "warning",
+      "name_ar": "تحذير قبل الخسارة",
+      "how": "A short command plus what is at stake; the viewer learns what to check before losing something real.",
+      "examples_ar": ["لا تشترِ نظاماً قبل هذا.", "توقف عن الرد اليدوي."],
+      "first_frame": "A character raising a hand to stop, or an alarm light, next to the risky thing.",
+      "emotion": "fear",
+      "evidence": "ContentLabs: fear (something to lose) led on average views; OpusClip imperative type; Douyin formula «千万不要…».",
+      "honesty": "The risk must be real and stated plainly. No scare tactics, no medical or financial threats."
+    },
+    {
+      "id": "investigator",
+      "name_ar": "لغز يحتاج جواباً",
+      "how": "Open an everyday mystery the viewer has noticed but never solved; answer it in the video.",
+      "examples_ar": ["ليش العميل يسأل ويختفي؟", "أين تذهب طلبات الليل؟"],
+      "first_frame": "The puzzle in the picture: a customer bubble that vanishes, question marks over the owner.",
+      "emotion": "curiosity",
+      "evidence": "ContentLabs: investigator openings about 140K average views; ViralVideoSearch: curiosity gap opens 14% of viral videos.",
+      "honesty": "The video must answer the question it opens."
+    },
+    {
+      "id": "identity_callout",
+      "name_ar": "نداء لصاحب الشأن",
+      "how": "Call the exact viewer by role, then the stake.",
+      "examples_ar": ["يا صاحب العيادة، انتبه.", "لأصحاب المحلات فقط."],
+      "first_frame": "A character pointing at the camera with the role written on a tag.",
+      "emotion": "belonging",
+      "evidence": "Chinese belonging and identity hook family (人人都是产品经理, 120 Douyin openings).",
+      "honesty": "Use only when the video is truly for that role."
+    },
+    {
+      "id": "list_count",
+      "name_ar": "عدد محدد",
+      "how": "Promise a small counted list the video then shows, one item per scene.",
+      "examples_ar": ["ثلاث أخطاء تطرد عملاءك.", "علامتان أن محلك يحتاج نظاماً."],
+      "first_frame": "The count as a big card and the first item already appearing.",
+      "emotion": "curiosity",
+      "evidence": "OpusClip specific-number type.",
+      "honesty": "The number counts items shown in THIS video, written as a word. Never a result, a price or a statistic."
+    },
+    {
+      "id": "pov",
+      "name_ar": "موقف «لما…»",
+      "how": "Drop the viewer inside a familiar moment; no explanation first.",
+      "examples_ar": ["لما العميل يقول: أفكر وأرجع.", "لما تقفل الدفتر وتلقى نقصاً."],
+      "first_frame": "The moment already in progress with an exaggerated reaction.",
+      "emotion": "empathy",
+      "evidence": "Revid 176,367 TikToks: POV had the highest median views of any shooting style (107K).",
+      "honesty": "An everyday moment, not a fake customer story."
+    },
+    {
+      "id": "proof_drop",
+      "name_ar": "دليل يُحفظ",
+      "how": "Offer something worth saving: a checklist, a self-test, a template shown fully on screen.",
+      "examples_ar": ["احفظ هذه القائمة قبل الشراء.", "اختبر محلك بثلاثة أسئلة."],
+      "first_frame": "The checklist card on screen from the first frame, first line readable.",
+      "emotion": "trust",
+      "evidence": "ContentLabs: proof-drop hooks earned the most saves (1,761 average); Douyin ranks save and save-plus-return.",
+      "honesty": "The whole list is shown in the video. Never promise to send anything."
+    },
+    {
+      "id": "expert_setup",
+      "name_ar": "خبرة حقيقية",
+      "how": "A real credential, then the thing nobody tells you.",
+      "examples_ar": ["مستشار أعمال يكشف أول خطأ.", "ما لا يخبرك به المبرمج."],
+      "first_frame": "The expert character with a badge, already mid-gesture.",
+      "emotion": "trust",
+      "evidence": "OpusClip: expert-explainer was the most common storyline (2,626 clips).",
+      "honesty": "Only credentials listed in the client's facts. Never invent years, titles or client counts."
+    }
+  ],
+  "weak_openers": {
+    "_about": "Openings that underperformed in the OpusClip and ContentLabs datasets. The copy gate rejects a hook that starts with any of these.",
+    "ar": ["هل تساءلت", "هل سبق", "هل فكرت", "مرحبا", "مرحباً", "أهلا", "أهلاً", "اهلا", "السلام عليكم", "اليوم سنتحدث", "اليوم سنتكلم", "اليوم بنتكلم", "في هذا الفيديو", "في هذا المقطع", "خليني أحكي", "خليني احكي", "دعني أحكي", "دعني أخبرك", "دعوني", "طيب ", "أوكي", "اوكي", "بصراحة ", "كما تعلم"],
+    "en": ["hi everyone", "hey guys", "hello ", "today we", "today i", "in this video", "let me tell you", "okay so", "ok so", "so basically", "have you ever wondered", "did you know"]
+  },
+  "emotions": {
+    "_about": "ContentLabs 3,997 videos (averages, one vendor, directional). Pick ONE per video.",
+    "fear": "something real to lose; led on views",
+    "empathy": "a moment the viewer lives every day; led on shares",
+    "outrage": "a common unfairness; led on comments. Keep it fair and never aimed at a named party",
+    "curiosity": "a gap to close; solid middle",
+    "trust": "useful and checkable; led on saves",
+    "avoid": "aspiration and hope were the weakest"
+  }
+}

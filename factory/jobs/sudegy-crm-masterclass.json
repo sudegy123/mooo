@@ -1,0 +1,228 @@
+{
+  "id": "sudegy-crm-masterclass",
+  "client": "sudegy",
+  "format": "crm-masterclass",
+  "lang": "ar",
+  "voiceStyle": "warm, enthusiastic, clear and authoritative Standard Arabic, natural pace, friendly professional business tone",
+  "topic": "Comprehensive, simple, and honest 2D educational explainer on CRM (Customer Relationship Management) for business owners and executives. Explaining what CRM is (central digital customer memory), why it is beneficial (prevents lost leads and forgotten follow-ups), its 3 core types (operational, collaborative, analytical), how it organizes client profiles and tracks service history, and why customer retention is vital and far cheaper than constantly acquiring new customers. Concluding with Sudegy consultative approach and bespoke ownership with zero monthly subscriptions.",
+  "notes": "Rich 2D vector animation with expressive characters, emojis, clear tags, deal pipelines, and client cards. Simple, honest, engaging, and directly relatable for modern businesses.",
+  "variants": {
+    "hooks": 3
+  },
+  "music": "factory/music/tech_drive.wav",
+  "musicVolume": 0.18,
+  "script": [
+    {
+      "role": "hook",
+      "text": "ما هو نظام إدارة علاقات العملاء ولماذا تحتاجه لشركتك؟",
+      "keyword": "العملاء"
+    },
+    {
+      "role": "define",
+      "text": "هو نظام رقمي يجمع كل محادثات وبيانات عملائك في منصة واحدة.",
+      "keyword": "منصة"
+    },
+    {
+      "role": "benefits",
+      "text": "يحميك من ضياع الزبائن وينظم متابعة الصفقات تلقائيا دون نسيان.",
+      "keyword": "تلقائيا"
+    },
+    {
+      "role": "types",
+      "text": "وينقسم لثلاثة أنواع رئيسية تشغيلي للمبيعات وتواصلي للرسائل وتحليلي لفهم الأرباح.",
+      "keyword": "أنواع"
+    },
+    {
+      "role": "retention",
+      "text": "يحفظ ملفا كاملا لكل عميل بالخدمات السابقة والمواعيد القادمة بدقة.",
+      "keyword": "بدقة"
+    },
+    {
+      "role": "importance",
+      "text": "ضروري جدا لأن الحفاظ على عميلك الحالي أقل تكلفة من جلب جديد.",
+      "keyword": "الحفاظ"
+    },
+    {
+      "role": "differ",
+      "text": "في سوديجي ندرس دورتك أولا ونبني نظاما مخصصا ملكك دون اشتراكات.",
+      "keyword": "مخصصا"
+    },
+    {
+      "role": "cta",
+      "text": "اكتب نشاطك في التعليقات لنصمم لك نظام إدارة العملاء المناسب.",
+      "keyword": "التعليقات"
+    }
+  ],
+  "hooks": [
+    {
+      "text": "هل تفقد عملاء يوميا بسبب فوضى رسائل الواتساب وتنسى متابعتهم؟",
+      "keyword": "الواتساب",
+      "technique": "relatable moment"
+    },
+    {
+      "text": "لماذا تخسر الشركات صفقات مؤكدة دون وجود نظام يتابع العملاء؟",
+      "keyword": "صفقات",
+      "technique": "direct question"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "title",
+      "say": ["hook"],
+      "bg": "dark",
+      "size": 86,
+      "sub": "نظام إدارة علاقات العملاء (CRM)"
+    },
+    {
+      "type": "stage",
+      "say": ["define"],
+      "bg": "room",
+      "props": [
+        { "id": "d", "type": "desk", "x": 280, "y": 1460 },
+        { "id": "lap", "type": "laptop", "x": 510, "y": 1440 },
+        { "id": "card", "type": "clientCard", "x": 230, "y": 760 }
+      ],
+      "chars": [
+        { "id": "m", "type": "man_gulf", "x": 640, "y": 1500, "opts": { "dress": "#ffffff" } }
+      ],
+      "els": [
+        { "id": "b1", "kind": "badge", "color": "good", "text": "✨ ملف العميل الرقمي الشامل", "x": 300, "y": 660 },
+        { "id": "t1", "kind": "tag", "color": "gold", "text": "📱 محادثات واتساب موحدة", "x": 220, "y": 1100 },
+        { "id": "t2", "kind": "tag", "color": "ink", "text": "📦 سجل تفاصيل الطلبات", "x": 220, "y": 1210 }
+      ],
+      "beats": [
+        { "at": 0.3, "do": "pop", "el": "b1" },
+        { "at": 0.7, "do": "point", "who": "m", "side": "r", "hold": 1.4 },
+        { "at": 1.1, "do": "pop", "el": "t1" },
+        { "at": 1.6, "do": "pop", "el": "t2" },
+        { "at": 2.2, "do": "smile", "who": "m" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["benefits"],
+      "bg": "light",
+      "props": [
+        { "id": "pipe", "type": "crmPipeline", "x": 250, "y": 760 }
+      ],
+      "chars": [
+        { "id": "lead", "type": "doctor_m", "x": 840, "y": 1500, "opts": { "scrub": "#0f6b57" } }
+      ],
+      "els": [
+        { "id": "m1", "kind": "mark", "ok": true, "x": 160, "y": 820 },
+        { "id": "tag_track", "kind": "badge", "color": "good", "text": "⚡ متابعة تلقائية دون نسيان", "x": 200, "y": 1140 },
+        { "id": "tag_sales", "kind": "badge", "color": "gold", "text": "🛡️ إغلاق الصفقات وتفادي التسرب", "x": 220, "y": 1260 },
+        { "id": "emo_shake", "kind": "emoji", "text": "🤝", "x": 520, "y": 660 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "m1" },
+        { "at": 0.6, "do": "point", "who": "lead", "side": "r", "hold": 1.4 },
+        { "at": 1.0, "do": "pop", "el": "tag_track" },
+        { "at": 1.5, "do": "pop", "el": "tag_sales" },
+        { "at": 2.0, "do": "pop", "el": "emo_shake" },
+        { "at": 2.3, "do": "cheer", "who": "lead" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["types"],
+      "bg": "room",
+      "props": [
+        { "id": "typesGrid", "type": "crmTypes", "x": 260, "y": 780 }
+      ],
+      "chars": [
+        { "id": "spk", "type": "seller", "x": 540, "y": 1500, "opts": { "shirt": "#0f6b57" } }
+      ],
+      "els": [
+        { "id": "b_tp", "kind": "badge", "color": "gold", "text": "📌 ثلاثة أركان أساسية للنظام", "x": 330, "y": 670 },
+        { "id": "tp1", "kind": "tag", "color": "good", "text": "⚙️ التشغيلي: مسار البيع الآلي", "x": 180, "y": 1080 },
+        { "id": "tp2", "kind": "tag", "color": "ink", "text": "💬 التواصلي: ربط قنوات الفريق", "x": 200, "y": 1180 },
+        { "id": "tp3", "kind": "tag", "color": "gold", "text": "📊 التحليلي: قراءة الأرباح والعملاء", "x": 190, "y": 1280 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_tp" },
+        { "at": 0.6, "do": "pop", "el": "tp1" },
+        { "at": 1.2, "do": "pop", "el": "tp2" },
+        { "at": 1.8, "do": "pop", "el": "tp3" },
+        { "at": 2.4, "do": "nod", "who": "spk" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["retention"],
+      "bg": "light",
+      "props": [
+        { "id": "card2", "type": "clientCard", "x": 240, "y": 760 }
+      ],
+      "chars": [
+        { "id": "m2", "type": "man_gulf", "x": 820, "y": 1500, "opts": { "dress": "#ffffff" } }
+      ],
+      "els": [
+        { "id": "th1", "kind": "badge", "color": "good", "text": "📋 أرشيف كامل وتاريخ الخدمات", "x": 200, "y": 1100 },
+        { "id": "th2", "kind": "badge", "color": "gold", "text": "⏰ تنبيه آلي بموعد المتابعة القادمة", "x": 190, "y": 1220 },
+        { "id": "emo_star", "kind": "emoji", "text": "⭐", "x": 480, "y": 660 }
+      ],
+      "beats": [
+        { "at": 0.3, "do": "pop", "el": "th1" },
+        { "at": 0.8, "do": "point", "who": "m2", "side": "r", "hold": 1.4 },
+        { "at": 1.2, "do": "pop", "el": "th2" },
+        { "at": 1.8, "do": "pop", "el": "emo_star" },
+        { "at": 2.2, "do": "smile", "who": "m2" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["importance"],
+      "bg": "room",
+      "props": [
+        { "id": "shield", "type": "growthShield", "x": 390, "y": 740 }
+      ],
+      "chars": [
+        { "id": "sd", "type": "man_sd", "x": 320, "y": 1500 },
+        { "id": "doc", "type": "seller", "x": 760, "y": 1500, "opts": { "shirt": "#0f6b57" } }
+      ],
+      "els": [
+        { "id": "c_rule", "kind": "card", "color": "gold", "text": "💡 القاعدة الذهبية لنمو الأرباح", "x": 310, "y": 630 },
+        { "id": "b_ret", "kind": "badge", "color": "good", "text": "📉 الحفاظ على العميل أرخص بخمس مرات", "x": 160, "y": 1130 },
+        { "id": "b_asset", "kind": "badge", "color": "gold", "text": "💰 العميل الدائم أصل حقيقي لشركتك", "x": 210, "y": 1250 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "c_rule" },
+        { "at": 0.7, "do": "nod", "who": "sd" },
+        { "at": 1.2, "do": "pop", "el": "b_ret" },
+        { "at": 1.7, "do": "pop", "el": "b_asset" },
+        { "at": 2.2, "do": "cheer", "who": "doc" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["differ"],
+      "bg": "light",
+      "props": [
+        { "id": "clk", "type": "clock", "x": 540, "y": 720 }
+      ],
+      "chars": [
+        { "id": "exec", "type": "man_gulf", "x": 360, "y": 1500, "opts": { "dress": "#ffffff" } },
+        { "id": "biz", "type": "doctor_m", "x": 720, "y": 1500, "opts": { "scrub": "#0f6b57" } }
+      ],
+      "els": [
+        { "id": "t_others", "kind": "tag", "color": "danger", "text": "الشركات: اشتراكات مستمرة وبرامج جاهزة", "x": 180, "y": 1040 },
+        { "id": "t_sudegy", "kind": "badge", "color": "good", "text": "سوديجي: استشارة متخصصة ونظام ملكك 100%", "x": 140, "y": 1160 },
+        { "id": "stamp_own", "kind": "stamp", "text": "ملكية كاملة بدون اشتراكات", "x": 420, "y": 1290 }
+      ],
+      "beats": [
+        { "at": 0.3, "do": "pop", "el": "t_others" },
+        { "at": 0.8, "do": "spin", "prop": "clk", "dur": 2.0, "turns": 2 },
+        { "at": 1.3, "do": "pop", "el": "t_sudegy" },
+        { "at": 1.8, "do": "nod", "who": "exec" },
+        { "at": 2.2, "do": "stamp", "el": "stamp_own" }
+      ]
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "char": { "type": "man_gulf", "x": 300, "opts": { "dress": "#ffffff" } },
+      "comment": "اكتب نشاطك في التعليقات لنصمم نظامك 💬👇"
+    }
+  ]
+}

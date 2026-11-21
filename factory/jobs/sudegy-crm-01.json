@@ -1,0 +1,138 @@
+{
+  "id": "sudegy-crm-01",
+  "client": "sudegy",
+  "format": "explainer-2d",
+  "lang": "ar",
+  "voiceStyle": "calm, clear, executive and confident Standard Arabic, medium pace, authoritative tone",
+  "topic": "Comprehensive 2D explainer for CRM (Customer Relationship Management) for business owners and executives. What CRM is: a centralized digital hub that captures every lead, customer inquiry, and conversation in one place. Benefits: prevents lost leads, automates WhatsApp follow-ups, organizes deals into clear pipeline stages, and accelerates sales. How Sudegy differs from traditional software companies: other companies sell generic off-the-shelf software with perpetual expensive monthly subscriptions that force you to adapt your workflow; Sudegy has senior business specialists (including an active GLG Business Consultant) who audit your operations first, then engineer a 100% bespoke CRM system with full ownership and zero monthly subscriptions.",
+  "notes": "2D vector animated presentation. The hook asks what CRM is and why companies need it. The define sentence clarifies that CRM unites all customer data and conversations centrally. The benefits sentence highlights automatic deal tracking and customer retention. The differ sentence emphasizes Sudegy operational consulting and bespoke system with full ownership and no subscriptions. The CTA invites owners to comment their industry.",
+  "variants": {
+    "hooks": 3
+  },
+  "music": "factory/music/tech_drive.wav",
+  "musicVolume": 0.20,
+  "script": [
+    {
+      "role": "hook",
+      "text": "ما هو نظام إدارة علاقات العملاء ولماذا تحتاجه لشركتك؟",
+      "keyword": "العملاء"
+    },
+    {
+      "role": "define",
+      "text": "هو نظام رقمي يجمع كل محادثات وبيانات عملائك في منصة واحدة.",
+      "keyword": "محادثات"
+    },
+    {
+      "role": "benefits",
+      "text": "فوائده متابعة الصفقات تلقائيا ومنع تسرب العملاء وزيادة سرعة المبيعات.",
+      "keyword": "تلقائيا"
+    },
+    {
+      "role": "differ",
+      "text": "نختلف بدراسة دورتك أولا وبناء نظام مخصص ملكك دون اشتراكات.",
+      "keyword": "مخصص"
+    },
+    {
+      "role": "cta",
+      "text": "اكتب نشاطك في التعليقات لنصمم لك نظام إدارة العملاء المناسب.",
+      "keyword": "التعليقات"
+    }
+  ],
+  "hooks": [
+    {
+      "text": "هل تفقد عملاء يوميا بسبب فوضى رسائل الواتساب وتنسى متابعتهم؟",
+      "keyword": "الواتساب",
+      "technique": "relatable moment"
+    },
+    {
+      "text": "لماذا تخسر الشركات صفقات مؤكدة دون نظام يتابع العملاء؟",
+      "keyword": "صفقات",
+      "technique": "direct question"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "title",
+      "say": ["hook"],
+      "bg": "dark",
+      "size": 88
+    },
+    {
+      "type": "stage",
+      "say": ["define"],
+      "bg": "room",
+      "props": [
+        { "id": "d", "type": "desk", "x": 280, "y": 1460 },
+        { "id": "lap", "type": "laptop", "x": 510, "y": 1440 }
+      ],
+      "chars": [
+        { "id": "m", "type": "man_gulf", "x": 540, "y": 1500, "opts": { "dress": "#ffffff" } }
+      ],
+      "els": [
+        { "id": "t1", "kind": "tag", "text": "محادثات واتساب مشتتة", "x": 560, "y": 1040, "color": "danger" },
+        { "id": "t2", "kind": "tag", "text": "دفاتر وملاحظات يدوية", "x": 220, "y": 1160, "color": "danger" },
+        { "id": "bub", "kind": "bubble", "text": "وين توقف العميل؟", "x": 260, "y": 760 }
+      ],
+      "beats": [
+        { "at": 0.3, "do": "tilt", "who": "m", "deg": 8 },
+        { "at": 0.7, "do": "pop", "el": "t1" },
+        { "at": 1.2, "do": "sad", "who": "m" },
+        { "at": 1.6, "do": "pop", "el": "t2" },
+        { "at": 2.2, "do": "pop", "el": "bub" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["benefits"],
+      "bg": "light",
+      "props": [
+        { "id": "crm", "type": "crmBoard", "x": 340, "y": 780 }
+      ],
+      "chars": [
+        { "id": "lead", "type": "doctor_m", "x": 800, "y": 1500, "opts": { "scrub": "#0f6b57" } }
+      ],
+      "els": [
+        { "id": "m1", "kind": "mark", "ok": true, "x": 160, "y": 840 },
+        { "id": "tag_track", "kind": "tag", "text": "متابعة تلقائية فورية", "x": 200, "y": 1160, "color": "good" },
+        { "id": "tag_sales", "kind": "tag", "text": "منع تسرب الصفقات", "x": 220, "y": 1280, "color": "gold" }
+      ],
+      "beats": [
+        { "at": 0.3, "do": "pop", "el": "m1" },
+        { "at": 0.8, "do": "point", "who": "lead", "side": "r", "hold": 1.5 },
+        { "at": 1.2, "do": "pop", "el": "tag_track" },
+        { "at": 1.8, "do": "smile", "who": "lead" },
+        { "at": 2.1, "do": "pop", "el": "tag_sales" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["differ"],
+      "bg": "light",
+      "props": [
+        { "id": "clk", "type": "clock", "x": 540, "y": 720 }
+      ],
+      "chars": [
+        { "id": "exec", "type": "man_gulf", "x": 380, "y": 1500, "opts": { "dress": "#ffffff" } },
+        { "id": "biz", "type": "doctor_m", "x": 720, "y": 1500, "opts": { "scrub": "#0f6b57" } }
+      ],
+      "els": [
+        { "id": "t_others", "kind": "tag", "text": "الشركات: اشتراكات وبرامج معقدة", "x": 200, "y": 1040, "color": "danger" },
+        { "id": "t_sudegy", "kind": "tag", "text": "سوديجي: استشارة ونظام مخصص ملكك", "x": 180, "y": 1160, "color": "gold" },
+        { "id": "stamp_own", "kind": "stamp", "text": "ملكية كاملة 100%", "x": 420, "y": 1300 }
+      ],
+      "beats": [
+        { "at": 0.3, "do": "pop", "el": "t_others" },
+        { "at": 0.8, "do": "spin", "prop": "clk", "dur": 2.2, "turns": 2 },
+        { "at": 1.3, "do": "pop", "el": "t_sudegy" },
+        { "at": 1.8, "do": "nod", "who": "exec" },
+        { "at": 2.2, "do": "stamp", "el": "stamp_own" }
+      ]
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "char": { "type": "doctor_m", "x": 300, "opts": { "scrub": "#0f6b57" } },
+      "comment": "اكتب نشاطك في التعليقات لنصمم نظامك"
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "id": "sudegy-dental-empty-chair-01",
+  "client": "sudegy",
+  "format": "dental-empty-chair",
+  "lang": "ar",
+  "voiceStyle": "rate=+10% natural warm authoritative engaging Arabic business creator tone, highly expressive medical storytelling with natural pacing",
+  "voice": "Fenrir",
+  "maxTempo": 1.15,
+  "minTempo": 1.0,
+  "topic": "إعلان عيادات الأسنان: حل مشكلة كرسي العيادة الفاضي وخسارة المواعيد. استعراض النموذج التفاعلي ثلاثي الأبعاد لفحص الأسنان وحجز المريض المباشر في ثوانٍ، واستلام التقرير الطبي فوراً على الواتساب لملء جدول المواعيد وزيادة دخل العيادة.",
+  "notes": "Spacious, non-overlapping TikTok video (19-23s) with clean graphic layout: empty dental chair, friction card with clear character separation, floating mobile phone displaying the live 3D tooth prototype video, animated checkmarks, doctor reactions, and comment CTA in pure light clinic aesthetic.",
+  "hookPattern": "outcome_first",
+  "emotion": "trust",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.16,
+  "search": [
+    "عيادة اسنان",
+    "كرسي عيادة الاسنان",
+    "تطبيق حجز اسنان 3d",
+    "نظام عيادات سوديجي"
+  ],
+  "script": [
+    {
+      "role": "hook",
+      "text": "كرسي عيادتك فاضي؟ الحل عندنا.",
+      "keyword": "الحل"
+    },
+    {
+      "role": "cause",
+      "text": "المرضى يجيهم ألم الأسنان لكن يكرهوا المكالمات والوصف الصعب.",
+      "keyword": "الأسنان"
+    },
+    {
+      "role": "demo",
+      "text": "نظامنا الذكي يخليهم يحددوا السن بنموذج تفاعلي ثلاثي الأبعاد.",
+      "keyword": "الأبعاد"
+    },
+    {
+      "role": "outcome",
+      "text": "يوصلك تقرير كامل بالواتساب والكرسي يمتلئ بحالات علاجية حقيقية.",
+      "keyword": "الكرسي"
+    },
+    {
+      "role": "cta",
+      "text": "لأصحاب عيادات الأسنان، اكتب عيادة بالتعليقات ونرسل لك الديمو.",
+      "keyword": "التعليقات"
+    }
+  ],
+  "hooks": [
+    {
+      "text": "ليه كرسي عيادتك يظل فاضي؟",
+      "keyword": "فاضي",
+      "pattern": "investigator"
+    },
+    {
+      "text": "كيف تملأ كرسي عيادتك يومياً؟",
+      "keyword": "عيادتك",
+      "pattern": "outcome_first"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "stage",
+      "say": ["hook"],
+      "bg": "clinic",
+      "props": [
+        { "id": "chair", "type": "dentalChair", "x": 60, "y": 1040, "faceOk": true }
+      ],
+      "chars": [
+        {
+          "id": "doc",
+          "cast": "dr_sara",
+          "x": 820,
+          "y": 1500,
+          "scale": 1.05,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_empty",
+          "kind": "badge",
+          "color": "danger",
+          "text": "⚠️ كرسي العيادة فاضي؟ خسارة دخل يومي",
+          "x": 150,
+          "y": 440,
+          "faceOk": true
+        },
+        {
+          "id": "m_cross",
+          "kind": "mark",
+          "ok": false,
+          "x": 280,
+          "y": 920,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_empty" },
+        { "at": 0.2, "do": "face", "who": "doc", "as": "nervous" },
+        { "at": 0.4, "do": "emote", "who": "doc", "kind": "sweat" },
+        { "at": 0.7, "do": "pop", "el": "m_cross" },
+        { "at": 1.2, "do": "zoomTo", "who": "doc", "scale": 1.25, "hold": 1.0 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["cause"],
+      "bg": "clinic",
+      "props": [
+        { "id": "phoneCard", "type": "phoneCallAgony", "x": 60, "y": 560, "scale": 0.88, "faceOk": true }
+      ],
+      "chars": [
+        {
+          "id": "doc",
+          "cast": "dr_sara",
+          "x": 880,
+          "y": 1500,
+          "scale": 1.0,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_fric",
+          "kind": "badge",
+          "color": "danger",
+          "text": "📞 مكالمات طويلة وأسئلة متكررة تضيع وقت الاستقبال",
+          "x": 140,
+          "y": 440,
+          "faceOk": true
+        },
+        {
+          "id": "m_err",
+          "kind": "mark",
+          "ok": false,
+          "x": 320,
+          "y": 920,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_fric" },
+        { "at": 0.3, "do": "face", "who": "doc", "as": "rage" },
+        { "at": 0.5, "do": "emote", "who": "doc", "kind": "exclaim" },
+        { "at": 0.8, "do": "pop", "el": "m_err" },
+        { "at": 1.4, "do": "shake", "who": "doc", "dur": 0.7 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["demo"],
+      "bg": "clinic",
+      "chars": [
+        {
+          "id": "doc",
+          "cast": "dr_sara",
+          "x": 170,
+          "y": 1500,
+          "scale": 1.05,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_proto",
+          "kind": "badge",
+          "color": "good",
+          "text": "🦷 فحص تفاعلي 3D لتحديد السن بلمسة واحدة",
+          "x": 180,
+          "y": 420,
+          "faceOk": true
+        },
+        {
+          "id": "ph_3d",
+          "kind": "phone_video",
+          "src": "dental_clip_3d",
+          "show": true,
+          "x": 380,
+          "y": 510,
+          "w": 420,
+          "rate": 1.2,
+          "faceOk": true
+        },
+        {
+          "id": "m_check",
+          "kind": "mark",
+          "ok": true,
+          "x": 840,
+          "y": 720,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_proto" },
+        { "at": 0.2, "do": "face", "who": "doc", "as": "smug" },
+        { "at": 0.4, "do": "emote", "who": "doc", "kind": "sparkle" },
+        { "at": 0.8, "do": "pop", "el": "ph_3d" },
+        { "at": 1.2, "do": "pop", "el": "m_check" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["outcome"],
+      "bg": "clinic",
+      "props": [
+        { "id": "chair_full", "type": "dentalChair", "x": 60, "y": 1040, "faceOk": true }
+      ],
+      "chars": [
+        {
+          "id": "doc",
+          "cast": "dr_sara",
+          "x": 840,
+          "y": 1500,
+          "scale": 1.05,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_win",
+          "kind": "badge",
+          "color": "good",
+          "text": "📋 استلام تقرير الحالة وحجز مؤكد على الواتساب",
+          "x": 140,
+          "y": 440,
+          "faceOk": true
+        },
+        {
+          "id": "b_chair",
+          "kind": "badge",
+          "color": "gold",
+          "text": "✅ امتلاء جدول مواعيد الكرسي بحالات علاجية",
+          "x": 160,
+          "y": 580,
+          "faceOk": true
+        },
+        {
+          "id": "m_ok2",
+          "kind": "mark",
+          "ok": true,
+          "x": 280,
+          "y": 920,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_win" },
+        { "at": 0.3, "do": "face", "who": "doc", "as": "love" },
+        { "at": 0.5, "do": "emote", "who": "doc", "kind": "sparkle" },
+        { "at": 0.8, "do": "pop", "el": "b_chair" },
+        { "at": 1.2, "do": "pop", "el": "m_ok2" }
+      ]
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "bg": "light",
+      "comment": "اكتب «عيادة» في التعليقات",
+      "char": {
+        "cast": "dr_sara",
+        "x": 300
+      }
+    }
+  ]
+}

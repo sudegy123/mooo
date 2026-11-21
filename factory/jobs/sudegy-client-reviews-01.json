@@ -1,0 +1,156 @@
+{
+  "id": "sudegy-client-reviews-01",
+  "client": "sudegy",
+  "format": "client-reviews",
+  "lang": "ar",
+  "voiceStyle": "rate=+10% natural warm authoritative engaging Arabic business creator tone, highly expressive case study storytelling with natural pacing",
+  "voice": "Fenrir",
+  "maxTempo": 1.15,
+  "minTempo": 1.0,
+  "topic": "استعراض آراء وتجارب حقيقية لعملاء سوديجي: استعراض النتائج الحقيقية الموثقة لعيادة د. مازن عبد الوهاب (نظام فحص سريري متطور)، وشركة أندوريا للطاقة الشمسية (حاسبة أحمال ذكية رفعت المبيعات)، ومتجر خلود فاروق KF Beauty (متجر إلكتروني متكامل وتجربة شراء استثنائية).",
+  "notes": "TikTok cut (20-25s) showcasing authentic customer WhatsApp reviews with edited 9:16 vertical cards, live product screens, and Noura welcoming viewers from frame 0.",
+  "hookPattern": "outcome_first",
+  "emotion": "trust",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.16,
+  "search": [
+    "اراء عملاء سوديجي",
+    "تجارب سوديجي",
+    "تصميم انظمة مخصصة",
+    "تطوير المتاجر والشركات"
+  ],
+  "script": [
+    {
+      "role": "hook",
+      "text": "آراء وتجارب حقيقية لعملائنا.",
+      "keyword": "حقيقية"
+    },
+    {
+      "role": "mazin",
+      "text": "في عيادة دكتور مازن نظام فحص سريري قلل الأسئلة ونظم العمل بالكامل.",
+      "keyword": "العمل"
+    },
+    {
+      "role": "andoria",
+      "text": "ولشركة أندوريا حاسبة تفاعلية رفعت المبيعات والطلب وسهلت خدمة عملائها.",
+      "keyword": "المبيعات"
+    },
+    {
+      "role": "kf",
+      "text": "ومتجر كي إف بيوتي تحول لإنجاز عالمي وتجربة تسوق متكاملة ومميزة.",
+      "keyword": "إنجاز"
+    },
+    {
+      "role": "cta",
+      "text": "اكتب مشروعك في التعليقات ونبني لك نظامك.",
+      "keyword": "نظامك"
+    }
+  ],
+  "hooks": [
+    {
+      "text": "شوف كيف غيّرنا شغل عملائنا.",
+      "keyword": "عملائنا",
+      "pattern": "outcome_first"
+    },
+    {
+      "text": "كيف تحولت مشاريع عملائنا؟",
+      "keyword": "مشاريع",
+      "pattern": "investigator"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "stage",
+      "say": [
+        "hook"
+      ],
+      "bg": "office",
+      "chars": [
+        {
+          "id": "noura",
+          "cast": "noura",
+          "x": 420,
+          "y": 1500,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_stars",
+          "kind": "badge",
+          "color": "gold",
+          "text": "⭐⭐⭐⭐⭐ تجارب حقيقية موثقة",
+          "x": 180,
+          "y": 480,
+          "faceOk": true
+        },
+        {
+          "id": "b_proof",
+          "kind": "bubble",
+          "text": "رسائل حقيقية من شاشات الواتساب 📲",
+          "x": 160,
+          "y": 620,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_stars" },
+        { "at": 0.3, "do": "face", "who": "noura", "as": "smug" },
+        { "at": 0.6, "do": "emote", "who": "noura", "kind": "sparkle" },
+        { "at": 1.0, "do": "pop", "el": "b_proof" },
+        { "at": 1.4, "do": "zoomTo", "who": "noura", "scale": 1.35, "hold": 1.2 }
+      ]
+    },
+    {
+      "type": "media",
+      "src": "slide_mazin",
+      "frame": "full",
+      "zoom": 1.02,
+      "caption": "none",
+      "bg": "light",
+      "shade": false,
+      "say": [
+        "mazin"
+      ]
+    },
+    {
+      "type": "media",
+      "src": "slide_andoria",
+      "frame": "full",
+      "zoom": 1.02,
+      "caption": "none",
+      "bg": "light",
+      "shade": false,
+      "say": [
+        "andoria"
+      ]
+    },
+    {
+      "type": "media",
+      "src": "slide_kfbeauty",
+      "frame": "full",
+      "zoom": 1.02,
+      "caption": "none",
+      "bg": "light",
+      "shade": false,
+      "say": [
+        "kf"
+      ]
+    },
+    {
+      "type": "cta",
+      "say": [
+        "cta"
+      ],
+      "bg": "light",
+      "comment": "اكتب مشروعك في التعليقات",
+      "char": {
+        "cast": "noura",
+        "x": 300
+      }
+    }
+  ]
+}

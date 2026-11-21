@@ -1,0 +1,83 @@
+{
+  "id": "sudegy-dental-diagnose",
+  "client": "sudegy",
+  "format": "dental-smart-triage",
+  "lang": "ar",
+  "voiceStyle": "clear, confident, authoritative and empathetic Arabic for doctors and clinic owners, energetic and professional medical tone",
+  "voice": "Fenrir",
+  "maxTempo": 1.02,
+  "minTempo": 0.88,
+  "topic": "Interactive 3D dental triage tool for dental clinics and doctors at sudegy.com/dental/diagnose. Patient enters a 3D mouth, selects the hurting tooth, chooses symptoms, and gets instant clinical guidance. The clinic receives an organized summary on WhatsApp before examination. Sudegy engineers custom AI and digital healthcare tools for dental clinics.",
+  "notes": "Real product walkthrough over genuine screen recording. Centered phone mockup showing 3D interactive teeth selection, symptom questionnaire, and structured WhatsApp clinical triage message.",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.18,
+  "script": [
+    {
+      "role": "hook",
+      "text": "يا دكتور، كم مريض أسنانه بتوجعه بالليل وبيضيع منك؟",
+      "keyword": "بالليل"
+    },
+    {
+      "role": "intro",
+      "text": "بدال وصف الوجع الملخبط، وفرنا لعيادتك فحص تفاعلي ثلاثي الأبعاد.",
+      "keyword": "الأبعاد"
+    },
+    {
+      "role": "demo",
+      "text": "يدخل المريض فما افتراضيا، يحدد السن والأعراض، ويستلم إرشاد أولي فوري.",
+      "keyword": "السن"
+    },
+    {
+      "role": "outcome",
+      "text": "وعيادتك تستلم تقرير منظم على واتساب بالحالة كاملة قبل موعد الزيارة.",
+      "keyword": "واتساب"
+    },
+    {
+      "role": "cta",
+      "text": "في سوديجي بنطور أنظمة مخصصة لمراكز الأسنان، تواصل معنا عبر موقعنا Sudegy.com.",
+      "keyword": "سوديجي"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "title",
+      "say": ["hook"],
+      "bg": "dark",
+      "size": 80,
+      "sub": "نظام الفرز التفاعلي الذكي لعيادات الأسنان"
+    },
+    {
+      "type": "phone",
+      "group": "app",
+      "say": ["intro"],
+      "bg": "dark",
+      "pill": "١. فحص تفاعلي 3D لتحديد السن بدقة",
+      "clip": "dental_clip_3d"
+    },
+    {
+      "type": "phone",
+      "group": "app",
+      "say": ["demo"],
+      "bg": "dark",
+      "pill": "٢. فرز أولي ذكي للأعراض وشدة الوجع",
+      "clip": "dental_clip_symptoms"
+    },
+    {
+      "type": "phone",
+      "group": "app",
+      "say": ["outcome"],
+      "bg": "dark",
+      "pill": "٣. ملخص سريري مرتب على واتساب العيادة",
+      "clip": "dental_clip_whatsapp"
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "bg": "dark",
+      "comment": "اطلب نموذج عيادتك الذكي عبر Sudegy.com 🦷💬"
+    }
+  ]
+}

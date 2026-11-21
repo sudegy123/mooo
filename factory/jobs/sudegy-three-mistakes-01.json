@@ -1,0 +1,287 @@
+{
+  "id": "sudegy-three-mistakes-01",
+  "client": "sudegy",
+  "format": "three-mistakes",
+  "lang": "ar",
+  "voiceStyle": "rate=+8% natural authoritative Gulf business creator tone, highly engaging educational storytelling with sharp pauses",
+  "voice": "Fenrir",
+  "maxTempo": 1.15,
+  "minTempo": 0.98,
+  "topic": "ثلاثة أخطاء تدمر مبيعات المتاجر والمواقع الجاهزة: بطء القوالب وارتداد الزوار 80%، تعقيد خطوات الدفع وإجبار التسجيل، ورمي العميل في محادثة واتساب عشوائية. والحل بنظام مسار ذكي يفرز العميل ويقفل الطلب المؤكد.",
+  "notes": "Punchy, highly educational TikTok motion graphics video (22-26s) in pure light office mode: 3 common e-commerce mistakes explained with hard facts, spacious 2D layout, Bu Saad struggling with friction, Noura revealing Sudegy's smart qualification funnel.",
+  "hookPattern": "numbered_list",
+  "emotion": "fear of a real avoidable loss, curiosity, clarity",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.16,
+  "search": [
+    "أخطاء المتاجر الجاهزة",
+    "زيادة مبيعات المتجر",
+    "سلة وشوبيفاي",
+    "نظام مسار ذكي سوديجي"
+  ],
+  "script": [
+    {
+      "role": "hook",
+      "text": "ثلاثة أخطاء تدمر مبيعات متجرك.",
+      "keyword": "تدمر"
+    },
+    {
+      "role": "m1",
+      "text": "أولا قوالب جاهزة بطيئة تهرب الزوار.",
+      "keyword": "بطيئة"
+    },
+    {
+      "role": "m2",
+      "text": "ثانيا تعقيد خطوات الدفع وإجبار العميل.",
+      "keyword": "تعقيد"
+    },
+    {
+      "role": "m3",
+      "text": "ثالثا رمي العميل في واتساب عشوائي.",
+      "keyword": "عشوائي"
+    },
+    {
+      "role": "fix",
+      "text": "الحل بمسار ذكي يفرز العميل ويقفل الطلب.",
+      "keyword": "الطلب"
+    },
+    {
+      "role": "cta",
+      "text": "احفظ الفيديو واكتب مجالك في التعليقات.",
+      "keyword": "التعليقات"
+    }
+  ],
+  "hooks": [
+    {
+      "text": "ثلاثة أخطاء تضيع ميزانية إعلاناتك.",
+      "keyword": "إعلاناتك",
+      "pattern": "investigator"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "stage",
+      "say": ["hook"],
+      "bg": "office",
+      "props": [
+        { "id": "desk", "type": "desk", "x": 100, "y": 1500, "scale": 0.85, "faceOk": true },
+        { "id": "laptop", "type": "laptop", "x": 260, "y": 1330, "scale": 0.85, "faceOk": true }
+      ],
+      "chars": [
+        {
+          "id": "bs",
+          "cast": "bu_saad",
+          "x": 860,
+          "y": 1500,
+          "scale": 1.05,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_hook",
+          "kind": "badge",
+          "color": "warn",
+          "text": "⚠️ 3 أخطاء شائعة في المتاجر الجاهزة",
+          "x": 160,
+          "y": 440,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_hook" },
+        { "at": 0.2, "do": "face", "who": "bs", "as": "nervous" },
+        { "at": 0.4, "do": "emote", "who": "bs", "kind": "exclaim" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["m1"],
+      "bg": "office",
+      "props": [
+        { "id": "card_m1", "type": "genericTemplateFriction", "x": 70, "y": 560, "scale": 0.88, "faceOk": true }
+      ],
+      "chars": [
+        {
+          "id": "bs",
+          "cast": "bu_saad",
+          "x": 880,
+          "y": 1500,
+          "scale": 1.0,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_m1",
+          "kind": "badge",
+          "color": "danger",
+          "text": "❌ الخطأ 1: بطء التحميل وارتداد 80% من الزوار",
+          "x": 130,
+          "y": 440,
+          "faceOk": true
+        },
+        {
+          "id": "m_c1",
+          "kind": "mark",
+          "ok": false,
+          "x": 320,
+          "y": 920,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_m1" },
+        { "at": 0.2, "do": "face", "who": "bs", "as": "rage" },
+        { "at": 0.4, "do": "emote", "who": "bs", "kind": "sweat" },
+        { "at": 0.7, "do": "pop", "el": "m_c1" },
+        { "at": 1.1, "do": "shake", "who": "bs", "dur": 0.7 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["m2"],
+      "bg": "office",
+      "props": [
+        { "id": "card_m2", "type": "checkoutFrictionCard", "x": 70, "y": 560, "scale": 0.88, "faceOk": true }
+      ],
+      "chars": [
+        {
+          "id": "bs",
+          "cast": "bu_saad",
+          "x": 880,
+          "y": 1500,
+          "scale": 1.0,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_m2",
+          "kind": "badge",
+          "color": "danger",
+          "text": "❌ الخطأ 2: تعقيد الشراء وإجبار التسجيل",
+          "x": 140,
+          "y": 440,
+          "faceOk": true
+        },
+        {
+          "id": "m_c2",
+          "kind": "mark",
+          "ok": false,
+          "x": 320,
+          "y": 920,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_m2" },
+        { "at": 0.2, "do": "face", "who": "bs", "as": "shock" },
+        { "at": 0.4, "do": "emote", "who": "bs", "kind": "anger" },
+        { "at": 0.7, "do": "pop", "el": "m_c2" },
+        { "at": 1.1, "do": "shake", "who": "bs", "dur": 0.7 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["m3"],
+      "bg": "office",
+      "props": [
+        { "id": "card_m3", "type": "bikamChaos", "x": 70, "y": 560, "scale": 0.88, "faceOk": true }
+      ],
+      "chars": [
+        {
+          "id": "bs",
+          "cast": "bu_saad",
+          "x": 880,
+          "y": 1500,
+          "scale": 1.0,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_m3",
+          "kind": "badge",
+          "color": "danger",
+          "text": "❌ الخطأ 3: واتساب عشوائي ومحادثات عقيمة",
+          "x": 140,
+          "y": 440,
+          "faceOk": true
+        },
+        {
+          "id": "m_c3",
+          "kind": "mark",
+          "ok": false,
+          "x": 320,
+          "y": 920,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_m3" },
+        { "at": 0.2, "do": "face", "who": "bs", "as": "dead" },
+        { "at": 0.4, "do": "emote", "who": "bs", "kind": "dizzy" },
+        { "at": 0.7, "do": "pop", "el": "m_c3" },
+        { "at": 1.1, "do": "shake", "who": "bs", "dur": 0.7 }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["fix"],
+      "bg": "office",
+      "props": [
+        { "id": "card_fix", "type": "smartFunnelCard", "x": 70, "y": 560, "scale": 0.88, "faceOk": true }
+      ],
+      "chars": [
+        {
+          "id": "noura",
+          "cast": "noura",
+          "x": 860,
+          "y": 1500,
+          "scale": 1.05,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_fix",
+          "kind": "badge",
+          "color": "good",
+          "text": "⚡ مسار فرز ذكي: تأهيل العميل وإغلاق بالواتساب",
+          "x": 130,
+          "y": 440,
+          "faceOk": true
+        },
+        {
+          "id": "m_fix",
+          "kind": "mark",
+          "ok": true,
+          "x": 320,
+          "y": 920,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_fix" },
+        { "at": 0.2, "do": "face", "who": "noura", "as": "smug" },
+        { "at": 0.4, "do": "emote", "who": "noura", "kind": "sparkle" },
+        { "at": 0.8, "do": "pop", "el": "m_fix" },
+        { "at": 1.2, "do": "face", "who": "noura", "as": "wow" }
+      ]
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "bg": "light",
+      "comment": "اكتب مجالك في التعليقات",
+      "char": {
+        "cast": "noura",
+        "x": 300
+      }
+    }
+  ]
+}

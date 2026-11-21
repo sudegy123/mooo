@@ -1,0 +1,83 @@
+{
+  "id": "sudegy-sneakers",
+  "client": "sudegy",
+  "format": "sneakers-store-showcase",
+  "lang": "ar",
+  "voiceStyle": "rate=+10% natural warm conversational Saudi creator tone",
+  "voice": "ar-SA-ZariyahNeural",
+  "maxTempo": 1.08,
+  "minTempo": 1.0,
+  "topic": "High-converting bespoke sneaker and shoe store built by Sudegy at sudegy.com/sneakers. Solves online shoe shopping friction: slow loading times, confusing sizing charts, and complicated multi-step checkout flows. Sudegy delivers instant EU sizing selection (EU 35-46), lightning-fast browsing, and seamless 1-click cart directly integrated with WhatsApp order verification.",
+  "notes": "Fast-paced TikTok showcase for sudegy.com/sneakers. Natural Arabic human voice (ar-SA-ZariyahNeural) hitting customer pain points in typical shoe stores, then demonstrating the fast, smooth bespoke experience with instant size picker and WhatsApp checkout.",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.16,
+  "script": [
+    {
+      "role": "hook",
+      "text": "تدري ليش أغلب متاجر الأحذية تخسر عملائها بأول ثواني؟",
+      "keyword": "الأحذية"
+    },
+    {
+      "role": "pain",
+      "text": "بسبب بطء الموقع، وصعوبة اختيار المقاس، وتعقيد خطوات الدفع.",
+      "keyword": "المقاس"
+    },
+    {
+      "role": "demo",
+      "text": "لكن مع متجر سوديجي، العميل يحدد مقاسه الأوروبي بضغطة زر وبسرعة فائقة.",
+      "keyword": "الأوروبي"
+    },
+    {
+      "role": "outcome",
+      "text": "وسلة الطلب مربوطة بالواتساب مباشرة لتأكيد المقاس والتوصيل فوراً.",
+      "keyword": "بالواتساب"
+    },
+    {
+      "role": "cta",
+      "text": "في سوديجي نصمم لك متجر مخصص يضاعف مبيعاتك، تواصل معنا عبر موقعنا Sudegy.com.",
+      "keyword": "سوديجي"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "title",
+      "say": ["hook"],
+      "bg": "dark",
+      "size": 80,
+      "sub": "سر المتاجر الإلكترونية الناجحة للأحذية"
+    },
+    {
+      "type": "phone",
+      "group": "app",
+      "say": ["pain"],
+      "bg": "dark",
+      "pill": "١. بطء التحميل ولخبطة المقاسات تضيع الصفقات",
+      "clip": "sneakers_clip_browse"
+    },
+    {
+      "type": "phone",
+      "group": "app",
+      "say": ["demo"],
+      "bg": "dark",
+      "pill": "٢. مقاسات أوروبية واضحة بضغطة واحدة وبسرعة فائقة",
+      "clip": "sneakers_clip_size"
+    },
+    {
+      "type": "phone",
+      "group": "app",
+      "say": ["outcome"],
+      "bg": "dark",
+      "pill": "٣. سلة فورية وطلب مباشر على واتساب بدون تعقيد",
+      "clip": "sneakers_clip_checkout"
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "bg": "dark",
+      "comment": "اطلب متجرك الإلكتروني المخصص عبر Sudegy.com 👟🚀"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": true,
+		"vocab": 51865,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "G:/sudegy-video-studio/tools/whisper/models/ggml-small.bin",
+		"language": "de",
+		"translate": false
+	},
+	"result": {
+		"language": "de"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:04,000"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 4000
+			},
+			"text": " Muss man mit Botox warten, bis das die Falten wirklich tief sind?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:04,000",
+				"to": "00:00:07,000"
+			},
+			"offsets": {
+				"from": 4000,
+				"to": 7000
+			},
+			"text": " Viele stehen wirklich tief, wirklich diese Frage."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:07,000",
+				"to": "00:00:09,000"
+			},
+			"offsets": {
+				"from": 7000,
+				"to": 9000
+			},
+			"text": " Botox an sich ist eine Profilachse."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:09,000",
+				"to": "00:00:11,000"
+			},
+			"offsets": {
+				"from": 9000,
+				"to": 11000
+			},
+			"text": " Botox eine Profilachse."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:11,000",
+				"to": "00:00:13,000"
+			},
+			"offsets": {
+				"from": 11000,
+				"to": 13000
+			},
+			"text": " Beugt Tiefenfalten vor."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:13,000",
+				"to": "00:00:15,000"
+			},
+			"offsets": {
+				"from": 13000,
+				"to": 15000
+			},
+			"text": " Für dauerhafte Jugend."
+		}
+	]
+}

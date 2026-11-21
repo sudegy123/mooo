@@ -1,0 +1,340 @@
+{
+  "id": "sudegy-crm-tiktok-01",
+  "client": "sudegy",
+  "format": "explainer-2d",
+  "lang": "ar",
+  "voiceStyle": "warm, clear, confident Standard Arabic, natural brisk pace like a short TikTok explainer, friendly and direct",
+  "topic": "شرح CRM في عشرين ثانية لأصحاب المحلات والشركات: ما هو نظام إدارة علاقات العملاء (CRM) والمشكلة التي يحلها، وهي عملاء يضيعون وسط رسائل الواتساب وطلبات بلا متابعة. Built from our TikTok data (2026-11-12): people reached our CRM post by searching 'انظمة crm', 'شرح crm', 'ازاي اعمل crm', 'crm system شنو'. The hook names the pain (customers lost in WhatsApp chats) in its first words; the word CRM must appear in the hook or in the define sentence so TikTok search can match the speech.",
+  "notes": "TikTok cut, 18-24 seconds. Hook of at most six words, spoken from the first frame, pain first. One idea per sentence. No numbers, no guarantees, no revenue claims. The cta asks viewers to comment the word CRM. Visuals: 2D art v2, shop owner flooded with customer messages at frame 0, then a consultant explains the customer file, a customer card moving through new / follow-up / sold, and the Sudegy way.",
+  "variants": {
+    "hooks": 3
+  },
+  "music": "factory/music/tech_drive.wav",
+  "musicVolume": 0.16,
+  "scenes": [
+    {
+      "type": "stage",
+      "say": [
+        "hook"
+      ],
+      "bg": "shop",
+      "chars": [
+        {
+          "id": "own",
+          "type": "seller",
+          "x": 360
+        }
+      ],
+      "props": [
+        {
+          "id": "ph",
+          "type": "phoneHand",
+          "x": 492,
+          "y": 1196,
+          "scale": 0.9,
+          "front": true
+        }
+      ],
+      "els": [
+        {
+          "id": "m1",
+          "kind": "bubble",
+          "text": "بكم؟",
+          "x": 640,
+          "y": 600
+        },
+        {
+          "id": "m2",
+          "kind": "bubble",
+          "text": "متوفر؟",
+          "x": 700,
+          "y": 750
+        },
+        {
+          "id": "m3",
+          "kind": "bubble",
+          "text": "وين طلبي؟",
+          "x": 610,
+          "y": 900
+        },
+        {
+          "id": "m4",
+          "kind": "bubble",
+          "text": "رديتوا؟",
+          "x": 720,
+          "y": 1050
+        }
+      ],
+      "beats": [
+        {
+          "do": "pop",
+          "el": "m1",
+          "at": 0.0
+        },
+        {
+          "do": "angry",
+          "who": "own",
+          "at": 0.1
+        },
+        {
+          "do": "pop",
+          "el": "m2",
+          "at": 0.3
+        },
+        {
+          "do": "pop",
+          "el": "m3",
+          "at": 0.6
+        },
+        {
+          "do": "pop",
+          "el": "m4",
+          "at": 0.9
+        },
+        {
+          "do": "shake",
+          "who": "own",
+          "at": 1.1,
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": [
+        "define"
+      ],
+      "bg": "office",
+      "chars": [
+        {
+          "id": "con",
+          "type": "woman",
+          "x": 300,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "c1",
+          "kind": "card",
+          "color": "gold",
+          "text": "ملف العميل",
+          "x": 590,
+          "y": 640
+        },
+        {
+          "id": "t1",
+          "kind": "tag",
+          "color": "good",
+          "text": "كل محادثاته",
+          "x": 610,
+          "y": 790
+        },
+        {
+          "id": "t2",
+          "kind": "tag",
+          "color": "good",
+          "text": "كل طلباته",
+          "x": 610,
+          "y": 900
+        },
+        {
+          "id": "t3",
+          "kind": "tag",
+          "color": "gold",
+          "text": "موعد متابعته",
+          "x": 610,
+          "y": 1010
+        }
+      ],
+      "beats": [
+        {
+          "do": "point",
+          "who": "con",
+          "at": "8%",
+          "side": "r",
+          "hold": 1.8
+        },
+        {
+          "do": "slideIn",
+          "el": "c1",
+          "at": "10%"
+        },
+        {
+          "do": "slideIn",
+          "el": "t1",
+          "at": "32%"
+        },
+        {
+          "do": "slideIn",
+          "el": "t2",
+          "at": "52%"
+        },
+        {
+          "do": "slideIn",
+          "el": "t3",
+          "at": "72%"
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": [
+        "benefits"
+      ],
+      "bg": "shop",
+      "chars": [
+        {
+          "id": "own2",
+          "type": "seller",
+          "x": 820
+        }
+      ],
+      "els": [
+        {
+          "id": "k1",
+          "kind": "badge",
+          "text": "عميل جديد",
+          "x": 90,
+          "y": 640
+        },
+        {
+          "id": "k2",
+          "kind": "badge",
+          "color": "gold",
+          "text": "متابعة",
+          "x": 90,
+          "y": 800
+        },
+        {
+          "id": "k3",
+          "kind": "badge",
+          "color": "good",
+          "text": "تم البيع",
+          "x": 90,
+          "y": 960
+        },
+        {
+          "id": "ok",
+          "kind": "mark",
+          "ok": true,
+          "x": 420,
+          "y": 950
+        }
+      ],
+      "beats": [
+        {
+          "do": "slideIn",
+          "el": "k1",
+          "at": "5%"
+        },
+        {
+          "do": "slideIn",
+          "el": "k2",
+          "at": "35%"
+        },
+        {
+          "do": "slideIn",
+          "el": "k3",
+          "at": "65%"
+        },
+        {
+          "do": "pop",
+          "el": "ok",
+          "at": "75%"
+        },
+        {
+          "do": "smile",
+          "who": "own2",
+          "at": "70%"
+        },
+        {
+          "do": "nod",
+          "who": "own2",
+          "at": "80%"
+        }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": [
+        "differ"
+      ],
+      "bg": "office",
+      "chars": [
+        {
+          "id": "adv",
+          "type": "man_gulf",
+          "x": 300,
+          "speaks": true
+        }
+      ],
+      "props": [
+        {
+          "id": "dk",
+          "type": "desk",
+          "x": 540,
+          "y": 1270
+        },
+        {
+          "id": "lp",
+          "type": "laptop",
+          "x": 760,
+          "y": 1246
+        }
+      ],
+      "els": [
+        {
+          "id": "d1",
+          "kind": "tag",
+          "color": "good",
+          "text": "نفهم شغلك أولاً",
+          "x": 560,
+          "y": 720
+        },
+        {
+          "id": "d2",
+          "kind": "tag",
+          "color": "gold",
+          "text": "نظام على مقاسك",
+          "x": 560,
+          "y": 850
+        }
+      ],
+      "beats": [
+        {
+          "do": "slideIn",
+          "el": "d1",
+          "at": "15%"
+        },
+        {
+          "do": "slideIn",
+          "el": "d2",
+          "at": "50%"
+        },
+        {
+          "do": "nod",
+          "who": "adv",
+          "at": "55%"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "say": [
+        "cta"
+      ],
+      "char": {
+        "type": "woman",
+        "x": 300
+      },
+      "comment": "اكتب CRM في التعليقات"
+    }
+  ],
+  "search": [
+    "شرح CRM",
+    "انظمة CRM",
+    "ازاي اعمل CRM",
+    "نظام CRM"
+  ]
+}

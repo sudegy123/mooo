@@ -1,0 +1,49 @@
+{
+  "id": "sudegy-enterprise-01",
+  "client": "sudegy",
+  "format": "pov-skit",
+  "lang": "ar",
+  "topic": "High-ticket ERP & CRM business consulting showcase. The problem: managing business through scattered WhatsApp chats and spreadsheets causes silent financial and operational leakage, while rigid off-the-shelf software fails because it doesn't match your real workflow. In Sudegy, we start with business consulting to study your operational cycle, then innovate and build a custom ERP and CRM engine tailored specifically to your business model. The CTA invites executives to comment their industry.",
+  "notes": "Ultra-premium, authoritative, executive tone. No cartoon props. The visuals are photorealistic enterprise scenes: corporate consulting boardroom, 3D dark glass ERP/CRM command dashboard, executive tablet, and refined luxury typography. The hook states the problem of scattered spreadsheets and chats. The escalate sentence calls out rigid generic software. The twist highlights Sudegy business consulting. The fix showcases our custom ERP and CRM systems. The CTA asks owners to comment their industry.",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.22,
+  "scenes": [
+    {
+      "type": "title",
+      "say": ["hook"],
+      "bg": "dark",
+      "size": 94
+    },
+    {
+      "type": "media",
+      "say": ["escalate"],
+      "src": "clip_control",
+      "frame": "full",
+      "zoom": 1.06
+    },
+    {
+      "type": "media",
+      "say": ["twist"],
+      "src": "clip_consulting",
+      "frame": "full",
+      "zoom": 1.08
+    },
+    {
+      "type": "media",
+      "say": ["fix"],
+      "src": "clip_erpcrm",
+      "frame": "full",
+      "zoom": 1.08
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "bg": "dark",
+      "comment": "اكتب نشاطك في التعليقات ونبتكر نظامك"
+    }
+  ]
+}
+

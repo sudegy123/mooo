@@ -1,0 +1,156 @@
+{
+  "id": "sudegy-client-reviews-concept",
+  "client": "sudegy",
+  "format": "client-reviews",
+  "lang": "ar",
+  "voiceStyle": "rate=+10% natural warm authoritative engaging Arabic business creator tone, highly expressive case study storytelling with natural pacing",
+  "voice": "Fenrir",
+  "maxTempo": 1.15,
+  "minTempo": 1.0,
+  "topic": "كيف تثق في النظام البرمجي قبل أن تدفع؟ فكرة استعراض ذكية للنتائج الحقيقية الموثقة لعملاء سوديجي عبر شاشات الواتساب الحية: عيادة د. مازن عبد الوهاب (نظام فحص سريري قلل الأسئلة ونظم العمل بالكامل)، شركة أندوريا (حاسبة أحمال ذكية رفعت المبيعات والطلب)، ومتجر خلود فاروق KF Beauty (متجر إلكتروني متكامل وتجربة تسوق عالمية ومميزة).",
+  "notes": "High-retention TikTok video (20-24s) answering buyer skepticism with undeniable proof via genuine WhatsApp reviews and live system screens in pure light mode.",
+  "hookPattern": "investigator",
+  "emotion": "trust",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.16,
+  "search": [
+    "كيف تثق في النظام",
+    "اراء عملاء سوديجي",
+    "تجارب سوديجي الحقيقية",
+    "برمجة انظمة مخصصة"
+  ],
+  "script": [
+    {
+      "role": "hook",
+      "text": "كيف تثق بالنظام قبل تدفع؟",
+      "keyword": "تثق"
+    },
+    {
+      "role": "mazin",
+      "text": "في عيادة دكتور مازن نظام فحص سريري قلل الأسئلة ونظم العمل بالكامل.",
+      "keyword": "العمل"
+    },
+    {
+      "role": "andoria",
+      "text": "ولشركة أندوريا حاسبة تفاعلية رفعت المبيعات والطلب وسهلت خدمة عملائها.",
+      "keyword": "المبيعات"
+    },
+    {
+      "role": "kf",
+      "text": "ومتجر كي إف بيوتي تحول لإنجاز عالمي وتجربة تسوق متكاملة ومميزة.",
+      "keyword": "إنجاز"
+    },
+    {
+      "role": "cta",
+      "text": "اكتب مشروعك في التعليقات ونبني لك نظامك.",
+      "keyword": "نظامك"
+    }
+  ],
+  "hooks": [
+    {
+      "text": "ليه عملاؤنا ما عادوا يشتكوا؟",
+      "keyword": "يشتكوا",
+      "pattern": "outcome_first"
+    },
+    {
+      "text": "سر رسائل شكر عملائنا الموثقة.",
+      "keyword": "الموثقة",
+      "pattern": "investigator"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "stage",
+      "say": [
+        "hook"
+      ],
+      "bg": "office",
+      "chars": [
+        {
+          "id": "noura",
+          "cast": "noura",
+          "x": 420,
+          "y": 1500,
+          "speaks": true
+        }
+      ],
+      "els": [
+        {
+          "id": "b_stars",
+          "kind": "badge",
+          "color": "gold",
+          "text": "⭐ كيف تثق بالنظام قبل تدفع؟",
+          "x": 160,
+          "y": 480,
+          "faceOk": true
+        },
+        {
+          "id": "b_proof",
+          "kind": "bubble",
+          "text": "إليك نتائج ورسائل عملائنا الحقيقية 📲",
+          "x": 140,
+          "y": 620,
+          "faceOk": true
+        }
+      ],
+      "beats": [
+        { "at": 0.0, "do": "pop", "el": "b_stars" },
+        { "at": 0.2, "do": "face", "who": "noura", "as": "smug" },
+        { "at": 0.5, "do": "emote", "who": "noura", "kind": "sparkle" },
+        { "at": 0.9, "do": "pop", "el": "b_proof" },
+        { "at": 1.3, "do": "zoomTo", "who": "noura", "scale": 1.32, "hold": 1.1 }
+      ]
+    },
+    {
+      "type": "media",
+      "src": "slide_mazin",
+      "frame": "full",
+      "zoom": 1.02,
+      "caption": "none",
+      "bg": "light",
+      "shade": false,
+      "say": [
+        "mazin"
+      ]
+    },
+    {
+      "type": "media",
+      "src": "slide_andoria",
+      "frame": "full",
+      "zoom": 1.02,
+      "caption": "none",
+      "bg": "light",
+      "shade": false,
+      "say": [
+        "andoria"
+      ]
+    },
+    {
+      "type": "media",
+      "src": "slide_kfbeauty",
+      "frame": "full",
+      "zoom": 1.02,
+      "caption": "none",
+      "bg": "light",
+      "shade": false,
+      "say": [
+        "kf"
+      ]
+    },
+    {
+      "type": "cta",
+      "say": [
+        "cta"
+      ],
+      "bg": "light",
+      "comment": "اكتب مشروعك في التعليقات",
+      "char": {
+        "cast": "noura",
+        "x": 300
+      }
+    }
+  ]
+}

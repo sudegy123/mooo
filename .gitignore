@@ -1,0 +1,8 @@
+node_modules/
+out/
+vendor-review/
+*.log
+.env
+config.json
+.cache/
+assets/screens/*.events.json.bak

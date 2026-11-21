@@ -1,0 +1,186 @@
+{
+  "id": "sudegy-erp-educational",
+  "client": "sudegy",
+  "format": "erp-masterclass",
+  "lang": "ar",
+  "voiceStyle": "rate=+12% natural warm energetic conversational Arabic business creator tone, confident and engaging with natural human pauses",
+  "voice": "Fenrir",
+  "maxTempo": 1.15,
+  "minTempo": 1.0,
+  "topic": "Fast-paced, high-emotion 2D educational TikTok masterclass explaining ERP (Enterprise Resource Planning): what it is (central brain of the company), how it transforms business operations (connecting sales, inventory, and accounting automatically), direct benefits (stopping cash leaks, inventory waste, real-time mobile reports), hitting client pain points (Excel spreadsheet chaos, lost paperwork, isolated departments), and honest truth (why 70% of generic ERP templates fail and why Sudegy audits business workflow first).",
+  "notes": "100% 2D cartoon animation with rich emotional character reactions, props, speech bubbles, hazard alerts, automated workflow diagrams, and mobile owner dashboard. Simple, honest, engaging, and high-retention for modern businesses.",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/tech_drive.wav",
+  "musicVolume": 0.16,
+  "script": [
+    {
+      "role": "hook",
+      "text": "تخيل مبيعاتك تبيع بضاعة، والمستودع يقولك خلصت، والمحاسب ما يدري وين الأرباح؟",
+      "keyword": "الأرباح"
+    },
+    {
+      "role": "define",
+      "text": "الـ ERP ببساطة هو العقل المركزي للشركة، يربط كل الأقسام بشاشة واحدة وقاعدة بيانات موحدة.",
+      "keyword": "المركزي"
+    },
+    {
+      "role": "workflow",
+      "text": "بدل جزر الإكسل المنعزلة، كل عملية بيع تحدث المخزون وتصدر الفاتورة للمحاسبة تلقائياً وبثواني.",
+      "keyword": "المخزون"
+    },
+    {
+      "role": "benefits",
+      "text": "يوقف هدر البضاعة وتسريب الفواتير، ويعطيك أرقام أرباحك الحقيقية لحظة بلحظة من جوالك.",
+      "keyword": "الحقيقية"
+    },
+    {
+      "role": "honesty",
+      "text": "بصراحة، أغلب الأنظمة تفشل لأنها قوالب جاهزة، في سوديجي ندرس دورتك أولاً ونصمم نظام مخصص ملكك بالكامل.",
+      "keyword": "مخصص"
+    },
+    {
+      "role": "cta",
+      "text": "اكتب نشاط شركتك في التعليقات، ونوريك كيف نظام الـ ERP يضبط أرباحك ومخزونك.",
+      "keyword": "التعليقات"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "stage",
+      "say": ["hook"],
+      "bg": "room",
+      "props": [
+        { "id": "rack", "type": "rack", "x": 740, "y": 1100 },
+        { "id": "chaos", "type": "excelChaos", "x": 250, "y": 760 },
+        { "id": "alarm", "type": "siren", "x": 540, "y": 520 }
+      ],
+      "chars": [
+        { "id": "boss", "type": "man_gulf", "x": 380, "y": 1500, "opts": { "dress": "#ffffff" } },
+        { "id": "clerk", "type": "seller", "x": 780, "y": 1500, "opts": { "shirt": "#2f8a57" } }
+      ],
+      "els": [
+        { "id": "b_hook", "kind": "badge", "color": "danger", "text": "🚨 أكبر كابوس: مبيعات ومخازن بدون ربط", "x": 250, "y": 640 },
+        { "id": "bub_boss", "kind": "bubble", "text": "المخزن فاضي وين البضاعة؟! ⚠️", "x": 160, "y": 1120 },
+        { "id": "bub_clerk", "kind": "bubble", "text": "الزبون دفع وأنا ما أدري! 🤷‍♂️", "x": 560, "y": 1240 },
+        { "id": "m_err", "kind": "mark", "ok": false, "x": 500, "y": 620 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_hook" },
+        { "at": 0.5, "do": "surprise", "who": "boss" },
+        { "at": 0.9, "do": "angry", "who": "boss" },
+        { "at": 1.2, "do": "pop", "el": "bub_boss" },
+        { "at": 1.6, "do": "shrug", "who": "clerk" },
+        { "at": 2.0, "do": "pop", "el": "bub_clerk" },
+        { "at": 2.5, "do": "shake", "who": "boss" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["define"],
+      "bg": "light",
+      "props": [
+        { "id": "hub", "type": "erpHub", "x": 230, "y": 740 }
+      ],
+      "chars": [
+        { "id": "mgr", "type": "man_gulf", "x": 820, "y": 1500, "opts": { "dress": "#ffffff" } }
+      ],
+      "els": [
+        { "id": "b_brain", "kind": "badge", "color": "good", "text": "🧠 العقل المركزي: شاشة وقاعدة بيانات موحدة", "x": 210, "y": 630 },
+        { "id": "tag_conn1", "kind": "badge", "color": "gold", "text": "🔗 ربط فوري بين المخزن والمبيعات والمحاسبة", "x": 200, "y": 1200 },
+        { "id": "tag_conn2", "kind": "badge", "color": "good", "text": "📊 قرارات دقيقة بدون تضارب في البيانات", "x": 230, "y": 1320 },
+        { "id": "emo_bolt", "kind": "emoji", "text": "⚡", "x": 510, "y": 580 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_brain" },
+        { "at": 0.6, "do": "point", "who": "mgr", "side": "r", "hold": 1.6 },
+        { "at": 1.0, "do": "pop", "el": "tag_conn1" },
+        { "at": 1.5, "do": "pop", "el": "tag_conn2" },
+        { "at": 2.0, "do": "pop", "el": "emo_bolt" },
+        { "at": 2.4, "do": "smile", "who": "mgr" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["workflow"],
+      "bg": "room",
+      "props": [
+        { "id": "flow", "type": "erpWorkflow", "x": 240, "y": 760 }
+      ],
+      "chars": [
+        { "id": "seller_char", "type": "seller", "x": 780, "y": 1500, "opts": { "shirt": "#0f6b57" } }
+      ],
+      "els": [
+        { "id": "b_flow", "kind": "badge", "color": "good", "text": "⚡ مسار آلي تلقائي في ثواني معدودة", "x": 230, "y": 640 },
+        { "id": "tag_instant", "kind": "badge", "color": "gold", "text": "🚀 وداعاً للتحديث اليدوي المرهق", "x": 240, "y": 1140 },
+        { "id": "stamp_sync", "kind": "stamp", "text": "تحديث فوري للمخزون", "x": 440, "y": 1260 },
+        { "id": "mark_pass", "kind": "mark", "ok": true, "x": 180, "y": 780 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_flow" },
+        { "at": 0.6, "do": "point", "who": "seller_char", "side": "r", "hold": 1.5 },
+        { "at": 1.1, "do": "pop", "el": "tag_instant" },
+        { "at": 1.5, "do": "pop", "el": "mark_pass" },
+        { "at": 1.9, "do": "stamp", "el": "stamp_sync" },
+        { "at": 2.4, "do": "cheer", "who": "seller_char" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["benefits"],
+      "bg": "light",
+      "props": [
+        { "id": "phone", "type": "mobileErp", "x": 405, "y": 740 }
+      ],
+      "chars": [
+        { "id": "lead_gulf", "type": "man_gulf", "x": 230, "y": 1500, "opts": { "dress": "#ffffff" } },
+        { "id": "doc_lead", "type": "doctor_m", "x": 830, "y": 1500, "opts": { "scrub": "#0f6b57" } }
+      ],
+      "els": [
+        { "id": "b_leak", "kind": "badge", "color": "good", "text": "🛡️ إيقاف هدر المخزون وتسريب الفواتير", "x": 210, "y": 630 },
+        { "id": "b_profit", "kind": "badge", "color": "gold", "text": "📈 أرقام أرباح حقيقية لحظة بلحظة من جوالك", "x": 160, "y": 1260 },
+        { "id": "emo_cash", "kind": "emoji", "text": "💰", "x": 510, "y": 580 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_leak" },
+        { "at": 0.6, "do": "phoneUp", "who": "lead_gulf", "side": "r" },
+        { "at": 1.0, "do": "pop", "el": "b_profit" },
+        { "at": 1.5, "do": "pop", "el": "emo_cash" },
+        { "at": 1.9, "do": "cheer", "who": "doc_lead" },
+        { "at": 2.3, "do": "smile", "who": "lead_gulf" }
+      ]
+    },
+    {
+      "type": "stage",
+      "say": ["honesty"],
+      "bg": "room",
+      "props": [
+        { "id": "audit", "type": "erpCustomAudit", "x": 240, "y": 760 }
+      ],
+      "chars": [
+        { "id": "founder", "type": "factory_boss", "x": 340, "y": 1500 },
+        { "id": "partner", "type": "man_gulf", "x": 760, "y": 1500, "opts": { "dress": "#ffffff" } }
+      ],
+      "els": [
+        { "id": "b_honesty", "kind": "badge", "color": "danger", "text": "⚠️ الصدق: لماذا تفشل 70% من أنظمة الـ ERP؟", "x": 180, "y": 640 },
+        { "id": "tag_custom", "kind": "badge", "color": "good", "text": "✨ سوديجي: هندسة دورتك أولاً ونظام مخصص ملكك", "x": 130, "y": 1130 },
+        { "id": "stamp_own", "kind": "stamp", "text": "ملكية كاملة بدون اشتراك", "x": 420, "y": 1260 }
+      ],
+      "beats": [
+        { "at": 0.2, "do": "pop", "el": "b_honesty" },
+        { "at": 0.7, "do": "shake", "who": "founder" },
+        { "at": 1.2, "do": "pop", "el": "tag_custom" },
+        { "at": 1.7, "do": "nod", "who": "partner" },
+        { "at": 2.1, "do": "stamp", "el": "stamp_own" },
+        { "at": 2.5, "do": "cheer", "who": "founder" }
+      ]
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "char": { "type": "man_gulf", "x": 300, "opts": { "dress": "#ffffff" } },
+      "comment": "اكتب نشاط شركتك في التعليقات لنصمم نظامك 💬👇"
+    }
+  ]
+}

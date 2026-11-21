@@ -1,0 +1,81 @@
+{
+  "id": "sudegy",
+  "name": "Sudegy",
+  "brand": "SUDEGY",
+  "brand_ar": "سوديجي",
+  "url": "sudegy.com",
+  "market": "Enterprises, clinics, and high-ticket service businesses in the Gulf and globally",
+  "tone": "authoritative, executive, clear",
+  "label": "",
+  "theme": {
+    "light": "#eef4f2",
+    "paper": "#ffffff",
+    "ink": "#1f2328",
+    "accent": "#0f6b57",
+    "accent2": "#6fe0c8",
+    "accent3": "#0f6b57",
+    "dark": "#0a111e",
+    "danger": "#c0392b"
+  },
+  "facts": [
+    "Sudegy features senior business specialists including an active Business Consultant with GLG (Gerson Lehrman Group) who audits business operations and bottlenecks first.",
+    "Most software projects fail because developers jump into coding without understanding business models or operational workflows.",
+    "Our business consultants study your workflows, bottlenecks, and revenue leaks, then translate them into clear architectural specifications.",
+    "Our senior software engineers build bespoke ERP and CRM systems tailored precisely to your operational cycle.",
+    "We do not build generic template websites; we build custom high-ticket operational systems that automate workflows and eliminate operational friction."
+  ],
+  "banned": [
+    "تشخيص",
+    "ضمان",
+    "مضمون",
+    "خصم"
+  ],
+  "rules": [
+    "No revenue promises or statistics unless supplied with a source."
+  ],
+  "assets": {
+    "sneakers_walkthrough": "assets/screens/sneakers_walkthrough.mp4",
+    "sneakers_clip_browse": "assets/screens/sneakers_clip_browse.mp4",
+    "sneakers_clip_size": "assets/screens/sneakers_clip_size.mp4",
+    "sneakers_clip_checkout": "assets/screens/sneakers_clip_checkout.mp4",
+    "flower_walkthrough": "assets/screens/flower_walkthrough.mp4",
+    "flower_clip_hero": "assets/screens/flower_clip_hero.mp4",
+    "flower_clip_catalog": "assets/screens/flower_clip_catalog.mp4",
+    "flower_clip_checkout": "assets/screens/flower_clip_checkout.mp4",
+    "kf_before_reel": "assets/screens/kf_before_reel.mp4",
+    "kf_after_reel": "assets/screens/kf_after_reel.mp4",
+    "kf_client_review": "assets/screens/kf_client_review.jpg",
+    "dental_user_walkthrough": "assets/screens/dental_user_walkthrough.mp4",
+    "dental_clip_3d": "assets/screens/dental_clip_3d.mp4",
+    "dental_clip_symptoms": "assets/screens/dental_clip_symptoms.mp4",
+    "dental_clip_whatsapp": "assets/screens/dental_clip_whatsapp.mp4",
+    "dental_diagnose_reel": "assets/screens/dental_diagnose_reel.mp4",
+    "sudegy_os_mobile": "assets/screens/sudegy_os_mobile_reel.mp4",
+    "recordings": {
+      "app": {
+        "video": "assets/screens/andoria_pristine_full.mp4",
+        "events": "assets/screens/andoria_pristine_full.events.json"
+      },
+      "aesthetic": {
+        "video": "assets/screens/aesthetic/raw.mp4",
+        "events": "assets/screens/aesthetic/raw.events.json"
+      }
+    },
+    "showrooms_rotunda": "assets/screens/sudegy_sudan_ad/02_sudegy_showrooms.jpg",
+    "face_scan": "assets/mazin_src/face_scan_ultra.mp4",
+    "microscope": "assets/mazin_src/microscope_dive_ultra.mp4",
+    "dental_screen": "assets/screens/dental_diagnose_ar.mp4",
+    "andoria_screen": "assets/screens/andoria_reel.mp4",
+    "clip_consulting": "assets/brand/clip_consulting.mp4",
+    "clip_erpcrm": "assets/brand/clip_erpcrm.mp4",
+    "clip_control": "assets/brand/clip_control.mp4",
+    "gemini_transition": "assets/brand/gemini_clinic_os_transition.mp4",
+    "clip_ops_chaos": "assets/brand/clip_ops_chaos.mp4",
+    "clip_ops_lab": "assets/brand/clip_ops_lab.mp4",
+    "clip_ops_revenue": "assets/brand/clip_ops_revenue.mp4",
+    "clip_ops_full_30s": "assets/brand/clip_ops_full_30s.mp4",
+    "slide_mazin": "out/reviews/slide_1_mazin_9x16.jpg",
+    "slide_andoria": "out/reviews/slide_2_andoria_9x16.jpg",
+    "slide_kfbeauty": "out/reviews/slide_3_kfbeauty_9x16.jpg"
+  }
+}

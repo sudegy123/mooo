@@ -1,0 +1,89 @@
+{
+  "id": "sudegy-glg-01",
+  "client": "sudegy",
+  "format": "pov-skit",
+  "lang": "en",
+  "voice": "Puck",
+  "voiceStyle": "authoritative, executive American English, calm, confident and clear, short natural pause after each sentence",
+  "topic": "High-ticket ERP & CRM business consulting showcase. The problem: generic software and off-the-shelf tools fail because developers build code without understanding business models or operations. The unfair advantage: Sudegy features senior business specialists including an active Business Consultant with GLG (Gerson Lehrman Group) who audits operational bottlenecks and revenue leaks first. Then our engineers architect bespoke ERP & CRM systems tailored precisely to your workflows.",
+  "notes": "Ultra-premium, authoritative, executive Silicon Valley tone. Photorealistic enterprise visuals: corporate consulting boardroom with holographic workflows, 3D dark glass ERP/CRM command dashboard, executive tablet, and refined luxury typography.",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.20,
+  "script": [
+    {
+      "role": "hook",
+      "text": "Most enterprise software fails because developers do not understand business.",
+      "keyword": "developers"
+    },
+    {
+      "role": "escalate",
+      "text": "You stay trapped in bloated tools and spreadsheets.",
+      "keyword": "spreadsheets"
+    },
+    {
+      "role": "twist",
+      "text": "Our GLG business consultant diagnoses your operational bottlenecks first.",
+      "keyword": "consultant"
+    },
+    {
+      "role": "fix",
+      "text": "Then our engineers build a bespoke ERP and CRM system.",
+      "keyword": "bespoke"
+    },
+    {
+      "role": "cta",
+      "text": "Comment SYSTEM below to audit your business software.",
+      "keyword": "SYSTEM"
+    }
+  ],
+  "hooks": [
+    {
+      "text": "Why do most enterprise software systems fail to deliver results?",
+      "keyword": "systems",
+      "technique": "direct question"
+    },
+    {
+      "text": "Never hire developers who do not study your business operations.",
+      "keyword": "operations",
+      "technique": "contrarian"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "title",
+      "say": ["hook"],
+      "bg": "dark",
+      "size": 86
+    },
+    {
+      "type": "media",
+      "say": ["escalate"],
+      "src": "clip_control",
+      "frame": "full",
+      "zoom": 1.08
+    },
+    {
+      "type": "media",
+      "say": ["twist"],
+      "src": "clip_consulting",
+      "frame": "full",
+      "zoom": 1.08
+    },
+    {
+      "type": "media",
+      "say": ["fix"],
+      "src": "clip_erpcrm",
+      "frame": "full",
+      "zoom": 1.08
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "bg": "dark",
+      "comment": "Comment SYSTEM to audit your business"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "sudegy-clinic-os-02",
+  "client": "sudegy",
+  "format": "three-mistakes",
+  "lang": "en",
+  "voice": "Puck",
+  "voiceStyle": "authoritative, executive American English, calm, confident and clear, short natural pause after each sentence",
+  "topic": "Educational explainer video defining a high-ticket Healthcare Operations System (ERP & CRM). Focuses on three core operational leaks in medical clinics: 1) missed appointments from unorganized chats, 2) delayed compounding lab orders from manual processes, and 3) multi-currency revenue leakage across regional branches. Sudegy architects custom healthcare operating systems with automated clinical reviews, 1-click WhatsApp compounding dispatch, and unified multi-currency billing.",
+  "notes": "Strict constraint: DO NOT mention Mazen or Mazen OS anywhere in speech, captions, or on-screen graphics. Use terms like 'Bespoke Healthcare Operating System'. Visuals highlight the three 10-second scenes: operational chaos, OLED compounding formulation with WhatsApp lab dispatch, and Dubai penthouse executive multi-currency command dashboard.",
+  "variants": {
+    "hooks": 1
+  },
+  "music": "factory/music/luxury_calm.wav",
+  "musicVolume": 0.20,
+  "script": [
+    {
+      "role": "hook",
+      "text": "Three silent operational mistakes drain medical clinic revenue.",
+      "keyword": "revenue"
+    },
+    {
+      "role": "m1",
+      "text": "First, handling patient follow-ups through scattered chats causes missed appointments.",
+      "keyword": "appointments"
+    },
+    {
+      "role": "m2",
+      "text": "Second, manual compounding orders create delays with outside laboratories.",
+      "keyword": "compounding"
+    },
+    {
+      "role": "m3",
+      "text": "Third, disconnected spreadsheets fail to track multi-currency revenue streams.",
+      "keyword": "multi-currency"
+    },
+    {
+      "role": "fix",
+      "text": "A custom healthcare operating system automates clinical reviews and compounding dispatch.",
+      "keyword": "operating"
+    },
+    {
+      "role": "cta",
+      "text": "Comment SYSTEM below to eliminate clinical operational leakage.",
+      "keyword": "SYSTEM"
+    }
+  ],
+  "hooks": [
+    {
+      "text": "Why do medical clinics lose revenue to manual spreadsheets?",
+      "keyword": "spreadsheets",
+      "technique": "direct question"
+    },
+    {
+      "text": "Never manage patient compounding orders through unorganized chats.",
+      "keyword": "compounding",
+      "technique": "contrarian"
+    }
+  ],
+  "scenes": [
+    {
+      "type": "title",
+      "say": ["hook"],
+      "bg": "dark",
+      "size": 84
+    },
+    {
+      "type": "media",
+      "say": ["m1"],
+      "src": "clip_ops_chaos",
+      "frame": "full",
+      "zoom": 1.05
+    },
+    {
+      "type": "media",
+      "say": ["m2"],
+      "src": "clip_ops_lab",
+      "frame": "full",
+      "zoom": 1.06
+    },
+    {
+      "type": "media",
+      "say": ["m3"],
+      "src": "clip_ops_revenue",
+      "frame": "full",
+      "zoom": 1.06
+    },
+    {
+      "type": "media",
+      "say": ["fix"],
+      "src": "clip_ops_lab",
+      "frame": "full",
+      "zoom": 1.08
+    },
+    {
+      "type": "cta",
+      "say": ["cta"],
+      "bg": "dark",
+      "comment": "Comment SYSTEM to audit your operations"
+    }
+  ]
+}
+
